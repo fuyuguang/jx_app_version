@@ -1,0 +1,6 @@
+feat: 腾讯乐固续费升级  fuyuguang  2023-10-23 15:58:01  957713f71
+feat: 立即送推荐商品添加（购物车中该商品）数量角标  fuyuguang  2023-10-17 18:30:35  bd7d5a025
+feat(提交订单页popwindow浮窗): 提交订单页_去完善浮窗提示_改为嵌到Item中实现  fuyuguang  2023-10-11 16:26:03  2a0dc3ba3
+feat: 当没有返回titles标签时(List<TabTitle>)不显示TabLayout,但推荐商品要显示  fuyuguang  2023-10-10 10:49:34  a51b0fb13
+feat: 商品详情页预售优化修改为同单击商品详情页立即购买按钮弹商品数量框，复用该框  fuyuguang  2023-10-09 17:45:55  38567cf42
+feat: 立即送首页改 &立即送提交订单地址优化  fuyuguang  2023-10-09 15:07:28  2ef266815

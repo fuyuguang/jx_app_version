@@ -1,0 +1,32 @@
+[
+    {
+        "displayName": "soft", 
+        "defaultIntensity": 0.5, 
+        "iconName": "Filter_28_Po6.png", 
+        "filePath": "Filter/Filter_28_Po6"
+    }, 
+    {
+        "displayName": "红色复古", 
+        "defaultIntensity": 0.5, 
+        "iconName": "Filter_44_S2.png", 
+        "filePath": "Filter/Filter_44_S2"
+    }, 
+    {
+        "displayName": "浅暖", 
+        "defaultIntensity": 0.5, 
+        "iconName": "Filter_10_11.png", 
+        "filePath": "Filter/Filter_10_11"
+    }, 
+    {
+        "displayName": "恋爱超甜", 
+        "defaultIntensity": 0.5, 
+        "iconName": "Filter_24_Po2.png", 
+        "filePath": "Filter/Filter_24_Po2"
+    }, 
+    {
+        "displayName": "柔白", 
+        "defaultIntensity": 0.5, 
+        "iconName": "Filter_01_38.png", 
+        "filePath": "Filter/Filter_01_38"
+    }
+]

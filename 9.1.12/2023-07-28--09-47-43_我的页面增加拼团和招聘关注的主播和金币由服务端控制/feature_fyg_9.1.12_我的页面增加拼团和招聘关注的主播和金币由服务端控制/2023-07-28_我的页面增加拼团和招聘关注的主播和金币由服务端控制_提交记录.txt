@@ -1,0 +1,38 @@
+-n 
+a1:
+commitTime: 2023/07/28-10:07:25    branchName: feature/feature_fyg_9.1.12_我的页面增加拼团和招聘关注的主播和金币由服务端控制    Commit: 749ab4892
+Message: 我的页面增加拼团和招聘关注的主播和金币由服务端控制
+Changed files:
+buildConfig/app.properties
+jiuxian/src/main/java/com/jiuxian/api/result/UserCenterModuleData.java
+jiuxian/src/main/java/com/jiuxian/client/adapter/ClubHeadAdapter.java
+
+
+a2:
+commitTime: 2023/07/28-15:32:28    branchName: feature/feature_fyg_9.1.12_我的页面增加拼团和招聘关注的主播和金币由服务端控制    Commit: f47945aac
+Message: 要根据sort 排序，客户端进行了排序，把排序规则去掉，有服务端顺序返回
+Changed files:
+jiuxian/src/main/java/com/jiuxian/api/result/UserCenterModuleData.java
+
+
+a3:
+commitTime: 2023/07/28-17:17:41    branchName: feature/feature_fyg_9.1.12_我的页面增加拼团和招聘关注的主播和金币由服务端控制    Commit: 4cc078cc6
+Message: update cesi
+Changed files:
+buildConfig/app.properties
+
+
+a4:
+commitTime: 2023/07/28-17:22:24    branchName: feature/feature_fyg_9.1.12_我的页面增加拼团和招聘关注的主播和金币由服务端控制    Commit: ec5b48faf
+Message: update
+Changed files:
+buildConfig/app.properties
+
+
+a5:
+commitTime: 2023/07/28-18:54:02    branchName: feature/feature_fyg_9.1.12_我的页面增加拼团和招聘关注的主播和金币由服务端控制    Commit: 6e21a9603
+Message: update
+Changed files:
+buildConfig/app.properties
+
+

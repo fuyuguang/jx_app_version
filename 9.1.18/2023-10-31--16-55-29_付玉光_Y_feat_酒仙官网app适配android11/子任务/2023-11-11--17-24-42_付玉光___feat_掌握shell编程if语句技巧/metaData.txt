@@ -1,0 +1,71 @@
+projectName=酒仙官网app
+taskTypeNameAbbreviation=feat
+taskTypeIndex=
+createBranchFlag=_
+productManager=周立新
+developer=付玉光
+tester=
+taskName=掌握shell编程if语句技巧
+branchVersion=9.1.18
+developerGroup=/Users/fuyuguang/Documents/付玉光Notes/1createTask/data/projectItem/酒仙官网app/DeveloperGroup.txt
+testerGroup=/Users/fuyuguang/Documents/付玉光Notes/1createTask/data/projectItem/酒仙官网app/TesterGroup.txt
+productManagerGroup=/Users/fuyuguang/Documents/付玉光Notes/1createTask/data/projectItem/酒仙官网app/ProductManagerGroup.txt
+workDirParent=/Users/fuyuguang/jiuxian_studio/doc/1版本
+mateDataCreateDate=2023-11-11
+mateDataCreateTaskHourMinuteSecond=17-24-42
+workDir=/Users/fuyuguang/jiuxian_studio/doc/1版本/酒仙官网app/9.1.18/2023-10-31--16-55-29_付玉光_Y_feat_酒仙官网app适配android11/子任务/2023-11-11--17-24-42_付玉光___feat_掌握shell编程if语句技巧
+branchName=feature/feature_fyg_9.1.18_掌握shell编程if语句技巧
+preReleaseBranchName=feature/feature_preRelease_9.1.18
+renamedFeatureBranchName=
+createTaskTime=2023-11-11/17-24-51
+emailFileName=test_email.md
+createTestEmailScriptName=appendTestEmail.sh
+branchMapTable=/Users/fuyuguang/Documents/付玉光Notes/1createTask/data/projectItem/酒仙官网app/branchCreateTimeMapTable.txt
+changedFileList=changedFileList.txt
+main=develop
+gitProjectRootPath=/Users/fuyuguang/jiuxian_studio
+showPatchDetails=false
+isCreateBranch=false
+generateFileChangedListScriptFile=listChangedFile.sh
+generateRenameBranchScriptFile=renamedBranchScriptFile.sh
+generateDeleteFeatureBranchScriptFile=deleteFeatureBranch.sh
+projectMetaData=metaData.txt
+taskDescriptionFile=掌握shell编程if语句技巧.md
+#项目元数据目录
+projectMetaDataVersionList=/Users/fuyuguang/Documents/付玉光Notes/1createTask/data/projectItem/酒仙官网app/version_list.txt
+#临时的父级任务列表文件
+temTaskListFilePath=/Users/fuyuguang/Documents/付玉光Notes/1createTask/data/projectItem/酒仙官网app/tem/taskList/taskList.txt
+#任务组层级
+taskHierarchyGroup=/Users/fuyuguang/Documents/付玉光Notes/1createTask/data/projectItem/酒仙官网app/TaskHierarchyGroup.txt
+taskHierarchyNameAbbreviation=level_2
+#项目临时数据存放目录
+projectTemDir=/Users/fuyuguang/Documents/付玉光Notes/1createTask/data/projectItem/酒仙官网app/tem
+metaDataPath=metaData.txt
+taskDesc=   -------- 以下是任务描述 ------
+<p>此外，请务必查看<a
+href="https://developer.android.google.cn/about/versions/11/behavior-changes-all?hl=zh-cn">对
+Android 11 上运行的所有应用都有影响的行为变更</a>列表。</p>
+<p>强制执行分区存储：对外部存储目录的访问仅限于应用专用目录，以及应用已创建的特定类型的媒体。
+自动重置权限：如果用户几个月未与应用互动，系统会自动重置应用的敏感权限。
+在后台访问位置信息的权限：用户必须转到系统设置，才能向应用授予在后台访问位置信息的权限。
+软件包可见性：当应用查询设备上已安装应用的列表时，系统会过滤返回的列表。</p>
+
+
+
+            ------ 以上是任务描述------=taskDesc
+
+changeScope=   -------- 以下是任务描述 ------
+
+<p>此外，请务必查看<a
+href="https://developer.android.google.cn/about/versions/11/behavior-changes-all?hl=zh-cn">对
+Android 11 上运行的所有应用都有影响的行为变更</a>列表。</p>
+<p>强制执行分区存储：对外部存储目录的访问仅限于应用专用目录，以及应用已创建的特定类型的媒体。
+自动重置权限：如果用户几个月未与应用互动，系统会自动重置应用的敏感权限。
+在后台访问位置信息的权限：用户必须转到系统设置，才能向应用授予在后台访问位置信息的权限。
+软件包可见性：当应用查询设备上已安装应用的列表时，系统会过滤返回的列表。</p>
+<figure>
+<img src="/Users/fuyuguang/jiuxian_studio/doc/付玉光笔记/开发工具安装配置/pandoc/markdown转html/测试/掌握shell编程if语句技巧.assets/logo-wechat.png" alt="微信" />
+<figcaption aria-hidden="true">微信</figcaption>
+</figure>
+<iframe src="./../2023-10-31--16-55-29_付玉光_Y_feat_酒仙官网app适配android11/子任务/2023-11-11--17-24-42_付玉光___feat_掌握shell编程if语句技巧/掌握shell编程if语句技巧.md" width="100%" height="500px"></iframe>
+               ------ 以上是任务描述------=changeScope

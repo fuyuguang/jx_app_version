@@ -1,0 +1,18 @@
+
+
+1.
+fileName
+--replace-all
+
+--replace-all key value
+    这个命令用来修改某个配置键值对，不添加 --replace-all 参数也可以进行配置键值的修改，只是对于某个键可能存在多个对应值时，添加这个参数后会全部进行修改，示例如下：
+
+git config --replace-all core.bare "true"
+2.git config --add key value
+    向配置文件中添加一个配置键，示例如下：
+
+git config --add core.new "new"
+3.git config --get key
+    查询某个配置键的值，示例如下：
+
+git config --get core.new

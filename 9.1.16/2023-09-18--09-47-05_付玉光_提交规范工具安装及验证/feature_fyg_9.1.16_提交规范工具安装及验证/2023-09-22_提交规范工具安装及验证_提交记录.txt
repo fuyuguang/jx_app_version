@@ -1,0 +1,65 @@
+-n 
+第1次提交:
+commitTime: 2023/09/22-09:56:08    branchName: feature/feature_fyg_9.1.16_提交规范工具安装及验证    Commit: b2dd1d531
+feat: 测试。
+
+Changed files:
+buildConfig/app.properties
+
+
+第2次提交:
+commitTime: 2023/09/22-10:39:39    branchName: feature/feature_fyg_9.1.16_提交规范工具安装及验证    Commit: bd1b55022
+feat: 测试
+
+Changed files:
+buildConfig/app.properties
+
+
+第3次提交:
+commitTime: 2023/09/22-11:26:15    branchName: feature/feature_fyg_9.1.16_提交规范工具安装及验证    Commit: 3042ee291
+feat: 测试
+
+Changed files:
+buildConfig/app.properties
+
+
+第4次提交:
+commitTime: 2023/09/22-11:27:41    branchName: feature/feature_fyg_9.1.16_提交规范工具安装及验证    Commit: 0f2931796
+feat: ceshi
+
+Changed files:
+buildConfig/app.properties
+
+
+第5次提交:
+commitTime: 2023/09/22-11:29:04    branchName: feature/feature_fyg_9.1.16_提交规范工具安装及验证    Commit: 51220e61d
+feat: ceh
+
+Changed files:
+buildConfig/app.properties
+
+
+第6次提交:
+commitTime: 2023/09/22-11:31:14    branchName: feature/feature_fyg_9.1.16_提交规范工具安装及验证    Commit: 3a6c419e6
+feat: ces
+
+Changed files:
+buildConfig/app.properties
+
+
+第7次提交:
+commitTime: 2023/09/22-11:39:49    branchName: feature/feature_fyg_9.1.16_提交规范工具安装及验证    Commit: 3a747691a
+feat: ceshi
+
+Changed files:
+buildConfig/app.properties
+
+
+第8次提交:
+commitTime: 2023/09/22-14:40:55    branchName: feature/feature_fyg_9.1.16_提交规范工具安装及验证    Commit: 88c2377ce
+feat: ces
+
+Changed files:
+buildConfig/app.properties
+
+

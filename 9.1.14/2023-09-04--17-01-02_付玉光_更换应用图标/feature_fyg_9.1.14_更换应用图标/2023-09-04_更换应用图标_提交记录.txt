@@ -1,0 +1,28 @@
+-n 
+a1:
+commitTime: 2023/09/04-17:13:31    branchName: feature/feature_fyg_9.1.14_更换应用图标    Commit: 8453987c7
+Message: 2023-09-04--17-01-02_付玉光_更换应用图标 feature_fyg_9.1.14_更换应用图标
+Changed files:
+jiuxian/src/main/ic_launcher-playstore.png
+jiuxian/src/main/res/mipmap-hdpi/ic_launcher.png
+jiuxian/src/main/res/mipmap-hdpi/ic_launcher_background.png
+jiuxian/src/main/res/mipmap-hdpi/ic_launcher_foreground.png
+jiuxian/src/main/res/mipmap-hdpi/ic_launcher_round.png
+jiuxian/src/main/res/mipmap-mdpi/ic_launcher.png
+jiuxian/src/main/res/mipmap-mdpi/ic_launcher_background.png
+jiuxian/src/main/res/mipmap-mdpi/ic_launcher_foreground.png
+jiuxian/src/main/res/mipmap-mdpi/ic_launcher_round.png
+jiuxian/src/main/res/mipmap-xhdpi/ic_launcher.png
+jiuxian/src/main/res/mipmap-xhdpi/ic_launcher_background.png
+jiuxian/src/main/res/mipmap-xhdpi/ic_launcher_foreground.png
+jiuxian/src/main/res/mipmap-xhdpi/ic_launcher_round.png
+jiuxian/src/main/res/mipmap-xxhdpi/ic_launcher.png
+jiuxian/src/main/res/mipmap-xxhdpi/ic_launcher_background.png
+jiuxian/src/main/res/mipmap-xxhdpi/ic_launcher_foreground.png
+jiuxian/src/main/res/mipmap-xxhdpi/ic_launcher_round.png
+jiuxian/src/main/res/mipmap-xxxhdpi/ic_launcher.png
+jiuxian/src/main/res/mipmap-xxxhdpi/ic_launcher_background.png
+jiuxian/src/main/res/mipmap-xxxhdpi/ic_launcher_foreground.png
+jiuxian/src/main/res/mipmap-xxxhdpi/ic_launcher_round.png
+
+

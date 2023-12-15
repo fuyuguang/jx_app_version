@@ -1,0 +1,41 @@
+{
+    "reshape": [
+        {
+            "defaultIntensity": 0.5, 
+            "displayName": "瘦脸", 
+            "key": "Internal_Deform_Overall", 
+            "iconName": "jx_cheek.png", 
+            "filePath": "ComposeMakeup/reshape_live"
+        }, 
+        {
+            "defaultIntensity": 0.5, 
+            "displayName": "大眼", 
+            "key": "Internal_Deform_Eye", 
+            "iconName": "jx_eye.png", 
+            "filePath": "ComposeMakeup/reshape_live"
+        }
+    ], 
+    "beauty": [
+        {
+            "defaultIntensity": 0.5, 
+            "displayName": "磨皮", 
+            "key": "smooth", 
+            "iconName": "jx_smooth.png", 
+            "filePath": "ComposeMakeup/beauty_Android_live"
+        }, 
+        {
+            "defaultIntensity": 0.5, 
+            "displayName": "锐化", 
+            "key": "sharp", 
+            "iconName": "jx_sharpen.png", 
+            "filePath": "ComposeMakeup/beauty_Android_live"
+        }, 
+        {
+            "defaultIntensity": 0.5, 
+            "displayName": "美白", 
+            "key": "whiten", 
+            "iconName": "jx_whiten.png", 
+            "filePath": "ComposeMakeup/beauty_Android_live"
+        }
+    ]
+}

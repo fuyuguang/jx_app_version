@@ -1,0 +1,46 @@
+-n 
+第1次提交:
+commitTime: 2023/09/18-11:06:12    branchName: feature/feature_fyg_9.1.16_提交规范工具安装及验证    Commit: 44bf149a4
+Keep calm and commit
+
+Changed files:
+.husky/pre-commit
+
+
+第2次提交:
+commitTime: 2023/09/18-11:07:36    branchName: feature/feature_fyg_9.1.16_提交规范工具安装及验证    Commit: 0604d2104
+test
+
+Changed files:
+buildConfig/app.properties
+
+
+第3次提交:
+commitTime: 2023/09/18-11:15:11    branchName: feature/feature_fyg_9.1.16_提交规范工具安装及验证    Commit: b5b177541
+test2
+
+Changed files:
+buildConfig/app.properties
+
+
+第4次提交:
+commitTime: 2023/09/18-14:26:36    branchName: feature/feature_fyg_9.1.16_提交规范工具安装及验证    Commit: d6f04cb06
+ test
+
+Changed files:
+.gitignore
+.husky/pre-commit
+.pre-commit-config.yaml
+buildConfig/app.properties
+package-lock.json
+package.json
+
+
+第5次提交:
+commitTime: 2023/09/18-14:38:39    branchName: feature/feature_fyg_9.1.16_提交规范工具安装及验证    Commit: 2092c7c90
+test 7
+
+Changed files:
+buildConfig/app.properties
+
+

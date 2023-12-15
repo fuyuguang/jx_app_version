@@ -1,0 +1,16 @@
+style: 限时抢购的图标和背景图尺寸帮    我看看你们写的是多高呗,要不改成260*20？ 你那边方便改吗  fuyuguang  2023-10-18 14:50:19  c6a1e1104
+style: 买赠字号小1号，然后居中一点，商品名称颜色是#333333  fuyuguang  2023-10-18 14:26:49  46f66137a
+style: 立即送底部推荐商品商品名称14号加粗，价格文字是32加粗  fuyuguang  2023-10-17 18:51:38  1d9701a9a
+style(dialog_quantity_storage.xml): 数量和储存温度，这几个字大2号呗，再加粗  fuyuguang  2023-10-17 18:43:17  53e33e908
+style: tablayout 下划线左右对齐  fuyuguang  2023-10-16 15:05:09  51251cb1a
+style(layout/fragment_shop_empty.xml): 返回首页与切换地址_间距30dp  fuyuguang  2023-10-16 15:04:08  a692f5904
+style(item_promotion.xml): 箭头改到粉色背景里面  fuyuguang  2023-10-16 15:01:30  58584d5cd
+style(item_gift.xml): 赠品布局改为方角而非圆角  fuyuguang  2023-10-16 14:59:40  50b5a210e
+style: 完善收货人信息，由于UI要求 布局箭头和之前一样居中对齐，所以外层新增RelativeLayout&收货地址行高默认改为1行，最大2行  fuyuguang  2023-10-16 14:56:07  f070cbea2
+style(item_mainshop_limit_recycleview.xml): 修改 B2CShopMainFragment 限时抢购item 更多活动颜色  fuyuguang  2023-10-11 17:49:34  0b31ae476
+style: app双11图标更换  fuyuguang  2023-10-10 18:25:38  252a92db5
+style(活动促销item): 样式修改  fuyuguang  2023-10-10 18:18:34  2b05a6f54
+style: 调整TabLayout各item间距及缩放模式  fuyuguang  2023-10-10 15:12:58  b0ab733b3
+style(B2CShopMainFragment): 搜索框样式修改  fuyuguang  2023-10-10 12:04:10  7f1818a74
+style(后台新增两套不同尺寸广告位，广告位分优先级，优先显示小尺寸banner): 核实UI尺寸  fuyuguang  2023-10-10 11:31:56  97c2a9e0b
+style: 促销标签背景改为#FFF8FA  fuyuguang  2023-10-10 11:16:41  7bc79ecdb

@@ -1,0 +1,9 @@
+a1:
+commitTime: 2023/07/28-10:07:25    branchName: feature/feature_fyg_9.1.12_我的页面增加拼团和招聘关注的主播和金币由服务端控制    Commit: 749ab4892
+Message: 我的页面增加拼团和招聘关注的主播和金币由服务端控制
+Changed files:
+buildConfig/app.properties
+jiuxian/src/main/java/com/jiuxian/api/result/UserCenterModuleData.java
+jiuxian/src/main/java/com/jiuxian/client/adapter/ClubHeadAdapter.java
+
+

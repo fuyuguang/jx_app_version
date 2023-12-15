@@ -1,0 +1,12 @@
+fix (商品详情页查看评价列表): 商品详情_查看某商品的评价列表_推荐和最新tab跟随页面滑动而非固定  fuyuguang  2023-10-23 10:10:25  8e2f51c23
+fix: fix_9.1.14_没有安装支付宝禁止使用支付宝网页支付  fuyuguang  2023-10-18 10:57:49  ee906452b
+fix(B2CShopChartAnimManager): 连续单击加购按钮更新适配器时view位置获取有误问题  fuyuguang  2023-10-17 19:00:35  208b64dd2
+fix: 小购物车进提交订单完善收货地址信息字样可单击  fuyuguang  2023-10-17 15:06:39  f1f2d6cb0
+fix: 修复活动页跳转后报错或打不开问题  fuyuguang  2023-10-16 17:08:56  c8150f909
+fix(OrderCommit2Activity | OrderCommitActivity): 提交订单去完善地址有两套逻辑，统一成一种&提交订单进地址页不需要带收货人姓名  fuyuguang  2023-10-12 16:01:53  1f5e9c4a6
+fix(JZKProductFragment:serDiscountData()): 商品详情页无促销活动商品切换到促销商品展示买赠促销信息_再切换到原商品应不显示买赠促销信息  fuyuguang  2023-10-12 10:45:17  3d90833f8
+fix(预售商品弹窗): 确认按钮文字改成支付定金&弹窗中修改数量后要带到详情页和提交订单页  fuyuguang  2023-10-10 17:08:15  207993843
+fix(DialogLoading): 通过参数指定dialog是否允许用户按返回键关闭除提交订单页面默认都允许用户关闭  fuyuguang  2023-10-10 14:50:36  c9efc816e
+fix(RecommendFragment): 代码健壮性判断  fuyuguang  2023-10-10 12:06:14  4bbc09271
+fix: 促销标签显示条件判断有误不应使用buyLargess 买赠字段，copy代码忘记改字段  fuyuguang  2023-10-10 11:19:40  7f71ce4f6
+fix: 添加混淆配置，修复RecyclerView反射属性mOverScroller报错  fuyuguang  2023-10-09 17:08:35  4cfbf01bf

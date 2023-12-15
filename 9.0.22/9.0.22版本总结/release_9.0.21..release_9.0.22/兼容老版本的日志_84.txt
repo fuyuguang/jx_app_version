@@ -1,0 +1,84 @@
+Merge branch 'release/release_9.0.22'  fuyuguang  2022-07-21 15:28:45  03172f7f1
+update  fuyuguang  2022-07-20 10:30:51  e8d5d7bf0
+update  fuyuguang  2022-07-20 10:30:33  cf3e28872
+Merge branch 'feature/feature_preRelease_9.0.22' into develop  fuyuguang  2022-07-18 16:17:56  c5c609b47
+update  fuyuguang  2022-07-18 16:17:17  813137db6
+Merge branch 'feature/feature_preRelease_9.0.22' of ssh://gitlab.9ijx.com:9830/android/jiuxian_studio into feature/feature_preRelease_9.0.22  fuyuguang  2022-07-15 16:59:49  c5efe59cd
+update  fuyuguang  2022-07-15 16:59:13  0887c9cad
+update  fuyuguang  2022-07-15 16:49:21  ca18d583a
+update  fuyuguang  2022-07-15 16:35:27  b3de03a47
+Merge branch 'feature/feature_preRelease_9.0.22' of ssh://gitlab.9ijx.com:9830/android/jiuxian_studio into feature/feature_preRelease_9.0.22  fuyuguang  2022-07-15 16:10:08  5927bac8c
+update  fuyuguang  2022-07-15 16:07:37  f64d1841a
+update  fuyuguang  2022-07-15 11:35:09  0ecf8dafa
+update  fuyuguang  2022-07-14 18:24:32  dd02a1e69
+Merge branch 'feature/feature_preRelease_9.0.22' of ssh://gitlab.9ijx.com:9830/android/jiuxian_studio into feature/feature_preRelease_9.0.22  fuyuguang  2022-07-14 16:59:15  30d50405b
+update view  fuyuguang  2022-07-14 16:59:10  2f8f0ce2a
+update  fuyuguang  2022-07-13 10:40:42  f3fdaa77b
+update  fuyuguang  2022-07-12 19:40:27  3ea25422b
+Merge branch 'feature/feature_preRelease_9.0.22' of ssh://gitlab.9ijx.com:9830/android/jiuxian_studio into feature/feature_preRelease_9.0.22  fuyuguang  2022-07-12 16:48:58  eaebe82b1
+update  fuyuguang  2022-07-12 16:48:52  a0438985f
+Merge branch 'feature/feature_preRelease_9.0.22' of ssh://gitlab.9ijx.com:9830/android/jiuxian_studio into feature/feature_preRelease_9.0.22  fuyuguang  2022-07-11 10:44:48  5edf8906f
+update  fuyuguang  2022-07-11 10:44:44  0d35d3fb7
+update  fuyuguang  2022-07-11 10:44:32  2daec3483
+Merge branch 'feature/feature_preRelease_9.0.22' of ssh://gitlab.9ijx.com:9830/android/jiuxian_studio into feature/feature_preRelease_9.0.22  fuyuguang  2022-07-08 17:05:17  a5d7b428a
+update  fuyuguang  2022-07-08 17:05:13  349631037
+Merge branch 'feature/feature_preRelease_9.0.22' of ssh://gitlab.9ijx.com:9830/android/jiuxian_studio into feature/feature_preRelease_9.0.22  fuyuguang  2022-07-08 14:38:59  eab3afcd9
+update icon  fuyuguang  2022-07-08 14:38:51  ee55068e4
+Merge branch 'feature/feature_preRelease_9.0.22' of ssh://gitlab.9ijx.com:9830/android/jiuxian_studio into feature/feature_preRelease_9.0.22  fuyuguang  2022-07-07 18:58:32  7c77cd982
+update  fuyuguang  2022-07-07 18:58:24  a04f702e6
+Merge branch 'feature/feature_preRelease_9.0.22' of ssh://gitlab.9ijx.com:9830/android/jiuxian_studio into feature/feature_preRelease_9.0.22  fuyuguang  2022-07-07 17:37:48  48a338574
+update  fuyuguang  2022-07-07 17:37:42  a820fe935
+Merge branch 'feature/feature_preRelease_9.0.22' of ssh://gitlab.9ijx.com:9830/android/jiuxian_studio into feature/feature_preRelease_9.0.22  fuyuguang  2022-07-07 15:59:23  b491440e4
+update  fuyuguang  2022-07-07 15:58:57  d9c608cfa
+update  fuyuguang  2022-07-07 11:38:50  239b36cb9
+update  fuyuguang  2022-07-07 10:13:02  bdab6e830
+Merge branch 'feature/feature_preRelease_9.0.22' of ssh://gitlab.9ijx.com:9830/android/jiuxian_studio into feature/feature_preRelease_9.0.22  fuyuguang  2022-07-06 19:22:21  7781c6c7f
+update  fuyuguang  2022-07-06 19:22:17  3f617923f
+Merge branch 'feature/feature_preRelease_9.0.22' of ssh://gitlab.9ijx.com:9830/android/jiuxian_studio into feature/feature_preRelease_9.0.22  fuyuguang  2022-07-06 16:53:23  9d994a895
+update  fuyuguang  2022-07-06 16:53:19  4372efbf4
+Merge branch 'feature/feature_preRelease_9.0.22' of ssh://gitlab.9ijx.com:9830/android/jiuxian_studio into feature/feature_preRelease_9.0.22  fuyuguang  2022-07-05 19:41:00  6405db669
+update  fuyuguang  2022-07-05 19:40:56  bf457aaee
+Merge branch 'feature/feature_preRelease_9.0.22' of ssh://gitlab.9ijx.com:9830/android/jiuxian_studio into feature/feature_preRelease_9.0.22  fuyuguang  2022-07-05 17:59:45  3029c3d5b
+update  fuyuguang  2022-07-05 17:58:29  b58cd0503
+Merge branch 'feature/feature_preRelease_9.0.22' of ssh://gitlab.9ijx.com:9830/android/jiuxian_studio into feature/feature_preRelease_9.0.22  fuyuguang  2022-07-05 16:43:51  9f429aed4
+update  fuyuguang  2022-07-05 16:37:05  b43c409bf
+update  fuyuguang  2022-07-05 16:35:10  d3c12d2ab
+update  fuyuguang  2022-07-04 20:33:08  3a48af3f8
+Merge branch 'feature/feature_preRelease_9.0.22' of ssh://gitlab.9ijx.com:9830/android/jiuxian_studio into feature/feature_preRelease_9.0.22  fuyuguang  2022-07-04 20:03:24  eff7b8eb6
+update  fuyuguang  2022-07-04 20:02:51  16238296e
+update  fuyuguang  2022-07-01 17:08:20  35947af74
+Merge branch 'feature/feature_preRelease_9.0.22' of ssh://gitlab.9ijx.com:9830/android/jiuxian_studio into feature/feature_preRelease_9.0.22  fuyuguang  2022-07-01 16:16:18  fb64eb9fe
+update  fuyuguang  2022-07-01 16:16:12  7b09b5cf9
+Merge branch 'feature/feature_preRelease_9.0.22' of ssh://gitlab.9ijx.com:9830/android/jiuxian_studio into feature/feature_preRelease_9.0.22  fuyuguang  2022-07-01 14:35:17  4087875d0
+update info  fuyuguang  2022-07-01 14:35:11  e25018de3
+upda  fuyuguang  2022-06-30 18:47:51  4fe74f8e8
+Merge branch 'feature/feature_preRelease_9.0.22' of ssh://gitlab.9ijx.com:9830/android/jiuxian_studio into feature/feature_preRelease_9.0.22  fuyuguang  2022-06-30 18:18:05  92bedf46e
+update  fuyuguang  2022-06-30 18:18:00  c394e2904
+Merge branch 'feature/feature_preRelease_9.0.22' of ssh://gitlab.9ijx.com:9830/android/jiuxian_studio into feature/feature_preRelease_9.0.22  fuyuguang  2022-06-29 19:10:32  0daae6295
+update  fuyuguang  2022-06-29 19:10:28  65a134330
+update  fuyuguang  2022-06-29 14:44:02  d29b420e8
+update  fuyuguang  2022-06-29 11:12:36  2a0ba397f
+Merge branch 'release/release_9.0.21' of ssh://gitlab.9ijx.com:9830/android/jiuxian_studio into feature/feature_preRelease_9.0.22  fuyuguang  2022-06-28 20:14:38  38fbb2e5d
+Merge branch 'feature/feature_preRelease_9.0.22' of ssh://gitlab.9ijx.com:9830/android/jiuxian_studio into feature/feature_preRelease_9.0.22  fuyuguang  2022-06-28 20:13:35  ac2a5b9b4
+update view  fuyuguang  2022-06-28 20:13:31  3cd214a21
+update  vediocache  fuyuguang  2022-06-28 15:22:05  f1d446f65
+update  fuyuguang  2022-06-28 11:15:38  5bf224058
+update  fuyuguang  2022-06-28 10:24:36  aaa73e6b2
+Merge branch 'feature/feature_preRelease_9.0.22' of ssh://gitlab.9ijx.com:9830/android/jiuxian_studio into feature/feature_preRelease_9.0.22  fuyuguang  2022-06-27 18:36:08  cdbac1b7e
+update  fuyuguang  2022-06-27 18:36:04  c6974c05b
+Merge branch 'feature/feature_preRelease_9.0.22' of ssh://gitlab.9ijx.com:9830/android/jiuxian_studio into feature/feature_preRelease_9.0.22  fuyuguang  2022-06-27 09:36:47  5f038af58
+update  提交订单  fuyuguang  2022-06-27 09:36:43  125dc71fd
+Merge branch 'feature/feature_preRelease_9.0.22' of ssh://gitlab.9ijx.com:9830/android/jiuxian_studio into feature/feature_preRelease_9.0.22  fuyuguang  2022-06-25 16:11:36  bf07e3bc8
+update  fuyuguang  2022-06-25 16:11:32  8931b9625
+Merge branch 'feature/feature_preRelease_9.0.22' of ssh://gitlab.9ijx.com:9830/android/jiuxian_studio into feature/feature_preRelease_9.0.22  fuyuguang  2022-06-24 20:03:05  43df072bd
+update  fuyuguang  2022-06-24 20:03:01  1a866ceb6
+update  fuyuguang  2022-06-24 17:15:09  8a18d7ff2
+update  fuyuguang  2022-06-24 12:02:06  30c45cf1a
+update  fuyuguang  2022-06-24 10:53:57  64b44bbe8
+Merge branch 'feature/feature_fyg_9.0.20_coupon_emergent' of ssh://gitlab.9ijx.com:9830/android/jiuxian_studio into feature/feature_preRelease_9.0.22  fuyuguang  2022-06-24 10:32:09  44145bf42
+update  fuyuguang  2022-06-24 10:08:38  d59a75b39
+update  fuyuguang  2022-06-15 05:48:59  1708bd9ae
+Merge tag 'release_9.0.21' into develop  fuyuguang  2022-06-15 05:21:11  1967f2150
+update  fuyuguang  2022-06-13 19:03:45  f611f0bcf
+update  fuyuguang  2022-06-13 16:16:23  e45c8ab59
+update  fuyuguang  2022-06-10 15:01:29  bab464960

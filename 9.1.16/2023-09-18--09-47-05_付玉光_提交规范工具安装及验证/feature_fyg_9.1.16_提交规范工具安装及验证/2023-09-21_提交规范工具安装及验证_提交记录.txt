@@ -1,0 +1,197 @@
+-n 
+第1次提交:
+commitTime: 2023/09/21-16:44:06    branchName: feature/feature_fyg_9.1.16_提交规范工具安装及验证    Commit: 9e851126a
+test: test
+
+Changed files:
+buildConfig/app.properties
+
+
+第2次提交:
+commitTime: 2023/09/21-16:46:05    branchName: feature/feature_fyg_9.1.16_提交规范工具安装及验证    Commit: d1998892a
+test: test
+test
+Changed files:
+buildConfig/app.properties
+
+
+第3次提交:
+commitTime: 2023/09/21-17:02:49    branchName: feature/feature_fyg_9.1.16_提交规范工具安装及验证    Commit: fe9fb4ef1
+test
+
+Changed files:
+.husky/pre-commit
+.pre-commit-config.yaml
+buildConfig/app.properties
+
+
+第4次提交:
+commitTime: 2023/09/21-17:16:10    branchName: feature/feature_fyg_9.1.16_提交规范工具安装及验证    Commit: 08998e373
+test
+
+Changed files:
+buildConfig/app.properties
+
+
+第5次提交:
+commitTime: 2023/09/21-17:20:06    branchName: feature/feature_fyg_9.1.16_提交规范工具安装及验证    Commit: 99e936563
+test1
+
+Changed files:
+buildConfig/app.properties
+
+
+第6次提交:
+commitTime: 2023/09/21-17:22:19    branchName: feature/feature_fyg_9.1.16_提交规范工具安装及验证    Commit: 64f4e9015
+TEST
+
+Changed files:
+buildConfig/app.properties
+
+
+第7次提交:
+commitTime: 2023/09/21-17:24:21    branchName: feature/feature_fyg_9.1.16_提交规范工具安装及验证    Commit: d07ce93e8
+1
+
+Changed files:
+buildConfig/app.properties
+
+
+第8次提交:
+commitTime: 2023/09/21-17:24:53    branchName: feature/feature_fyg_9.1.16_提交规范工具安装及验证    Commit: 1e8ce7a50
+2
+
+Changed files:
+buildConfig/app.properties
+
+
+第9次提交:
+commitTime: 2023/09/21-17:25:53    branchName: feature/feature_fyg_9.1.16_提交规范工具安装及验证    Commit: 2aa927a02
+3
+
+Changed files:
+buildConfig/app.properties
+
+
+第10次提交:
+commitTime: 2023/09/21-17:27:17    branchName: feature/feature_fyg_9.1.16_提交规范工具安装及验证    Commit: 679afd94a
+4
+
+Changed files:
+buildConfig/app.properties
+
+
+第11次提交:
+commitTime: 2023/09/21-17:28:48    branchName: feature/feature_fyg_9.1.16_提交规范工具安装及验证    Commit: f3c404588
+5
+
+Changed files:
+buildConfig/app.properties
+
+
+第12次提交:
+commitTime: 2023/09/21-17:32:38    branchName: feature/feature_fyg_9.1.16_提交规范工具安装及验证    Commit: 014c025bc
+6
+
+Changed files:
+buildConfig/app.properties
+
+
+第13次提交:
+commitTime: 2023/09/21-17:33:50    branchName: feature/feature_fyg_9.1.16_提交规范工具安装及验证    Commit: ae3b3642a
+style: test
+dsfdsfdsfsdfdsfdf
+dsfdsfdsfdsfsd
+3333
+Changed files:
+buildConfig/app.properties
+
+
+第14次提交:
+commitTime: 2023/09/21-17:42:33    branchName: feature/feature_fyg_9.1.16_提交规范工具安装及验证    Commit: 0747912f7
+test7
+
+Changed files:
+buildConfig/app.properties
+
+
+第15次提交:
+commitTime: 2023/09/21-17:44:17    branchName: feature/feature_fyg_9.1.16_提交规范工具安装及验证    Commit: 4e5fb5935
+8
+
+Changed files:
+buildConfig/app.properties
+
+
+第16次提交:
+commitTime: 2023/09/21-17:47:21    branchName: feature/feature_fyg_9.1.16_提交规范工具安装及验证    Commit: 101f71499
+88
+
+Changed files:
+buildConfig/app.properties
+
+
+第17次提交:
+commitTime: 2023/09/21-18:03:06    branchName: feature/feature_fyg_9.1.16_提交规范工具安装及验证    Commit: 5c5c42da6
+111
+
+Changed files:
+buildConfig/app.properties
+
+
+第18次提交:
+commitTime: 2023/09/21-18:15:36    branchName: feature/feature_fyg_9.1.16_提交规范工具安装及验证    Commit: 4b2cec72f
+14
+
+Changed files:
+buildConfig/app.properties
+
+
+第19次提交:
+commitTime: 2023/09/21-18:22:09    branchName: feature/feature_fyg_9.1.16_提交规范工具安装及验证    Commit: 40303b25e
+14
+
+Changed files:
+buildConfig/app.properties
+
+
+第20次提交:
+commitTime: 2023/09/21-18:43:02    branchName: feature/feature_fyg_9.1.16_提交规范工具安装及验证    Commit: 052d3ba4a
+test: test
+
+Changed files:
+buildConfig/app.properties
+
+
+第21次提交:
+commitTime: 2023/09/21-18:54:46    branchName: feature/feature_fyg_9.1.16_提交规范工具安装及验证    Commit: 366fb97c5
+ui: ui
+
+Changed files:
+buildConfig/app.properties
+
+
+第22次提交:
+commitTime: 2023/09/21-19:00:51    branchName: feature/feature_fyg_9.1.16_提交规范工具安装及验证    Commit: 55bfe827a
+ui: 测试
+
+Changed files:
+buildConfig/app.properties
+
+
+第23次提交:
+commitTime: 2023/09/21-19:02:26    branchName: feature/feature_fyg_9.1.16_提交规范工具安装及验证    Commit: f2cb6fc89
+fix: 测试
+
+Changed files:
+buildConfig/app.properties
+
+
+第24次提交:
+commitTime: 2023/09/21-19:22:28    branchName: feature/feature_fyg_9.1.16_提交规范工具安装及验证    Commit: 1156df078
+feat: sdfds
+
+Changed files:
+buildConfig/app.properties
+
+

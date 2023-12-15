@@ -1,0 +1,234 @@
+metaData.txt 要改的地方：
+
+
+projectName=酒仙官网app
+productManager=周立新
+developer=付玉光
+taskName=测试1
+branchVersion=1.1.1
+developerGroup=/Users/fuyuguang/Documents/付玉光Notes/1createTask/data/DeveloperGroup.txt
+productManagerGroup=/Users/fuyuguang/Documents/付玉光Notes/1createTask/data/ProductManagerGroup.txt
+workDir=/Users/fuyuguang/jiuxian_studio/doc/1版本/酒仙官网app/1.1.1/2023-08-22--17-53-00_付玉光_测试1   要改
+branchName=feature/feature_fyg_1.1.1_测试11                       要改
+preReleaseBranchName=feature/feature_preRelease_1.1.1
+renamedFeatureBranchName=                       要改
+createTaskTime=2023-08-22/17-53-00
+emailFileName=test_email.md
+createTestEmailScriptName=appendTestEmail.sh
+branchMapTable=/Users/fuyuguang/Documents/付玉光Notes/1createTask/data/branchCreateTimeMapTable.txt
+changedFileList=/Users/fuyuguang/jiuxian_studio/doc/1版本/酒仙官网app/1.1.1/2023-08-22--17-53-00_付玉光_测试1/changedFileList.txt    要改
+main=develop
+android_studio_root=/Users/fuyuguang/jiuxian_studio
+showPatchDetails=false
+isCreateBranch=true
+generateFileChangedListScriptFile=/Users/fuyuguang/jiuxian_studio/doc/1版本/酒仙官网app/1.1.1/2023-08-22--17-53-00_付玉光_测试1/listChangedFile.sh     要改
+generateRenameBranchScriptFile=/Users/fuyuguang/jiuxian_studio/doc/1版本/酒仙官网app/1.1.1/2023-08-22--17-53-00_付玉光_测试1/renamedBranchScriptFile.sh        要改
+generateDeleteFeatureBranchScriptFile=/Users/fuyuguang/jiuxian_studio/doc/1版本/酒仙官网app/1.1.1/2023-08-22--17-53-00_付玉光_测试1/deleteFeatureBranch.sh     要改
+
+
+
+
+
+提交说明：
+
+a,1
+只要 从新赋值 带有 workDir的项，其他都不用改，
+1，让用户从新输入，分支版本号，任务名称，开发人员，创建时间还是复用之前的，根据分支版本号，任务名称，开发人员生成新的任务目录文件夹， 格式为：
+
+taskDirName="${mateDataCreateDate}--${mateDataCreateTaskHourMinuteSecond}_${developer}_${taskName}"
+"${workDirParent}/${projectName}/${branchVersion}/${taskDirName}"
+
+由于元数据大部分都是可复用的，所以，只需要读该文件，把可复用的读入内容，从新复写该文件就可以。
+
+然后通过
+rsync -av --delete "${oldWorkDir}/" "${workDir}/"
+命令把数据整体迁移到新 任务目录中，然后把 "${oldWorkDir}" 目录删除  rm -rf "${oldWorkDir}"
+
+变更项目信息：
+分为：大的改动和小的改动
+大的改动：涉及迁移目录   ： 分支版本号，开发人员，任务名称，这些都需要 ，从命名分支名  和 迁移文件夹目录
+小的改动：产品人员变更，等信息，直接编辑 metaData.txt 文件 ，追加测试邮件的时候，会自动更正
+
+a,2
+任务md中增加 页面结构，用来描述 activity和fragment的对应关系
+
+a,3
+增加 提交说明项，汇总该任务，对代码的改动
+
+a,4
+增加
+mateDataCreateDate=2023-08-23
+mateDataCreateTaskHourMinuteSecond=16-08-51
+用来拼接 任务目录的名称
+taskDirName="${mateDataCreateDate}--${mateDataCreateTaskHourMinuteSecond}_${developer}_${taskName}"
+"${workDirParent}/${projectName}/${branchVersion}/${taskDirName}"
+
+
+a,5
+createTestEmailScript.sh
+
+  改用 EOF 来实现，
+先获取$1，及metaData.txt文件的相对路径，在获取绝对路径，通过变量引用绝对路径，而非把绝对路径写死在文件中，
+目的是为了，重命名分支和目录后，还能找到对应的  metaData.txt 文件。
+gitCreateDeleteFeatureBranch.sh 和 gitCreateListChangedFile.sh 同理
+
+metaDataFile=$(basename "$1")
+metaDataFile=\$(readlink -f "\${metaDataFile}")
+create_a_test_email_v2 "\${metaDataFile}"
+
+
+a,6
+重命名文件思路：
+git_generate_rename_branch_script_file2.sh
+
+获取当前目录下的 metaData.txt 文件
+获取metaData.txt 文件的绝对路径，并定义成变量
+读取 metaData.txt 中的不变部分内容：
+oldWorkDir
+projectName
+productManager
+developerGroup
+productManagerGroup
+workDirParent
+mateDataCreateDate
+mateDataCreateTaskHourMinuteSecond
+和
+preReleaseBranchName
+createTaskTime=
+emailFileName=
+createTestEmailScriptName
+branchMapTable
+main=
+android_studio_root
+showPatchDetails
+isCreateBranch
+branchName
+
+列出 developerGroup 中的内容，让用户选择 开发人员，调用 workFlowUtil.sh 中的buildDeveloperName方法
+会生成 developer 和 developerNameAbbreviation 变量，
+
+
+让用户填写任务的名称 taskName ，并校验taskName 是否为空
+
+让用户填写任务的分支名 branchVersion ，并校验 branchVersion 是否为空
+
+
+重新组中  workDir 并创建 workDir 目录
+workDir="${workDirParent}/${projectName}/${branchVersion}/${mateDataCreateDate}--${mateDataCreateTaskHourMinuteSecond}_${developer}_${taskName}"
+
+
+
+从新组装， 生成git的历史文件名路径，生成git历史的shell脚本文件路径，生成重命名分支的脚本文件路径,生成删除分支的shell脚本文件路径
+changedFileList="${workDir}/changedFileList.txt"
+generateFileChangedListScriptFile="${workDir}/listChangedFile.sh"
+generateRenameBranchScriptFile="${workDir}/renamedBranchScriptFile.sh"
+generateDeleteFeatureBranchScriptFile="${workDir}/deleteFeatureBranch.sh"
+
+
+生成重命名的分支名
+renamedFeatureBranchName="feature/feature_${developerNameAbbreviation}_${branchVersion}_${taskName}"
+
+增加安全校验   确定要执行重命名操作吗？
+
+进入到项目目录下
+cd ${android_studio_root}
+
+判断 新分支名 renamedFeatureBranchName 是否已经存在，如果存在，提示用户更换
+
+
+
+
+
+git 执行 重命名分支操作：
+
+#a1.先重命名本地分支，判断该命令是否执行成功，如果重命名不成功终止执行，让用户重新命名
+    git branch -m ${branchName} ${renamedFeatureBranchName}
+    if((0 != \$?))
+    then
+      macos_show_dialog "❌ 新分支名  \${renamedFeatureBranchName} 不合法"
+      exit
+    fi
+
+#a2.删除远程分支
+    git push -d origin ${branchName}
+#a3.上传新修改名称的本地分支
+    git push origin ${renamedFeatureBranchName}
+#a4.修改后的本地分支关联远程分支
+    git push --set-upstream origin ${renamedFeatureBranchName}
+
+
+创建 workDir 目录
+mkdir -p -- "${workDir}"
+
+同步数据到新文件夹下，并删除老工作目录
+rsync -av --delete "${oldWorkDir}/" "${workDir}/"
+rm -rf "${oldWorkDir}"
+
+把元数据信息，重新写会到 新 工作目录中 "${workDir}/metaData.txt"
+
+
+
+a,7
+branchPrefix 变量修改为 developerNameAbbreviation  开发人员简称更能见名知意
+
+a,8,
+重命名分支时，添加本地是否还有该分支的判断，如果本地已经没有该分支，禁止重命名，
+创建 workDir 目录，要等到校验条件都通过后在  mkdir -p -- "\${workDir}"  创建 目录，
+比如：  新分支名不合法，导致创建分支失败，但目录已经迁移过期了，
+
+
+a,9
+执行该任务后，当前进入的目录是一个已经被删除的目录，需要另开一个终端，来显示，或者退出当前目录！！！
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+a,1
+jx_construct_task_flow.sh
+从项目的配置文件中读取git工程的根目录，而非写死的方式，方便创建其他项目时复用。
+gitProjectRootPath=$(getProjectMetaData "${projectMetaData}" "gitProjectRootPath")
+main=$(getProjectMetaData "${projectMetaData}" "main")
+
+配置文件写入
+-main=develop
+-android_studio_root=${android_studio_root}
++main=${main}
++gitProjectRootPath=${gitProjectRootPath}
+
+
+
+
+git_generate_rename_branch_script_file2.sh
+进入到 git 管理的目录后才能判断某分支是否存在，此处不能使用 git res-parse 来获取 git的根路径，因为当前路径不一定在 受git管理的目录下
+

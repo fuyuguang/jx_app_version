@@ -1,0 +1,16 @@
+Merge branch 'release/release_9.1.14'  fuyuguang  2023-09-11 10:09:25  6df553d31
+Merge branch 'feature/feature_preRelease_9.1.14' into develop  fuyuguang  2023-09-11 10:06:15  dba93be11
+修改UI， a,1 tagview标签变小等等  fuyuguang  2023-09-06 16:02:23  c42e3d169
+2023-09-06--09-51-41_付玉光_app中用WebviewActivity打开club页面时要传递区域id给到wap页 feature_fyg_9.1.14_app中用WebviewActivity打开club页面时要传递区域id给到wap页  fuyuguang  2023-09-06 10:05:53  4de16be07
+修改UI，预留一个UI特性待上线，下个版本补上【tab跟随页面滑动而非固定】  fuyuguang  2023-09-06 09:04:03  8aeb34239
+2023-09-04--17-01-02_付玉光_更换应用图标 feature_fyg_9.1.14_更换应用图标  fuyuguang  2023-09-04 17:13:31  8453987c7
+修复bug:  fuyuguang  2023-09-01 16:24:05  63693be32
+修复bug:  fuyuguang  2023-08-30 11:22:26  778971ea8
+a,1 2023-08-29--18-19-53_付玉光_项目中校验码文字改为验证码 feature/feature_fyg_9.1.14_项目中校验码文字改为验证码  fuyuguang  2023-08-29 18:35:59  e69f5d7a8
+a,3 修改bug : 当关联的商品过多时，页面不能滑动，并且底部按钮显示不出来 优化UI  fuyuguang  2023-08-29 18:16:07  f0815a27a
+修改bug : 未登录用户，加入购物车不需要引导用户去登录页面，直接调用加入购物车接口及可  fuyuguang  2023-08-29 11:03:21  1fdbda2cc
+修改bug : SwitchProductDialog.java 修改商品数量后 关闭弹窗或加入购物车后 商品详情页显示修改后数量 ，而非数量1  fuyuguang  2023-08-28 18:24:10  a62323fd2
+2023-08-24--10-12-31_付玉光_没有安装支付宝禁止使用支付宝网页支付 feature/feature_fyg_9.1.14_没有安装支付宝禁止使用支付宝网页支付  fuyuguang  2023-08-24 10:39:59  5e3a0c2f2
+2023-08-15--15-09-14_付玉光_商品详情模块评论页新增时间排序 feature/feature_fyg_9.1.14_商品详情模块评论页新增时间排序  fuyuguang  2023-08-24 09:37:51  d509082d8
+a,1 RecyclerView  使用 GridLayoutManager  添加分割线  fuyuguang  2023-08-24 09:17:44  923ecddaf
+Merge tag 'release_9.1.13' into develop  fuyuguang  2023-08-19 15:56:07  697c4fd27

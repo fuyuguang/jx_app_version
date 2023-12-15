@@ -1,0 +1,18 @@
+-n 
+第1次提交:
+commitTime: 2023/09/27-11:03:32    branchName: feature/feature_fyg_9.1.17_添加tablayout缩放动画_支持瀑布流item缓存    Commit: 2ad5d2bb5
+fix: 修复安装支付宝后不能使用支付宝支付
+2023-09-27--10-48-44
+feature_fyg_9.1.18_修复安装支付宝后不能使用支付宝支付
+Changed files:
+jiuxian/src/main/java/com/jiuxian/client/expand/impl/AliPay.java
+
+
+第2次提交:
+commitTime: 2023/09/27-11:06:12    branchName: feature/feature_fyg_9.1.17_添加tablayout缩放动画_支持瀑布流item缓存    Commit: 34a53ea40
+build: config version info
+
+Changed files:
+buildConfig/app.properties
+
+

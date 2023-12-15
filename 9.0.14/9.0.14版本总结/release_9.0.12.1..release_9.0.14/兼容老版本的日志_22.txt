@@ -1,0 +1,22 @@
+Merge branch 'release/release_9.0.14'  fuyuguang  2022-03-31 16:56:26  f7104bfdf
+Merge branch 'feature/feature_preRelease9.0.13' into develop  fuyuguang  2022-03-31 16:54:55  4d79b65be
+update  fuyuguang  2022-03-31 11:40:30  18b17f592
+update  fuyuguang  2022-03-30 10:55:15  aed1522ff
+update  修复地址弹框bug  fuyuguang  2022-03-30 09:54:18  8cf82ab5a
+update  fuyuguang  2022-03-29 20:00:24  0b690761a
+update 修复dialog中的条目显示不全问题，  fuyuguang  2022-03-29 19:59:45  f8d53ff6a
+update  fuyuguang  2022-03-29 16:27:12  18064b443
+Revert "Revert "UPDATE""  fuyuguang  2022-03-29 10:28:15  c85073ee3
+Revert "UPDATE"  fuyuguang  2022-03-29 09:46:26  25994ee1e
+Merge branch 'feature/feature_preRelease9.0.13' of ssh://gitlab.9ijx.com:9830/android/jiuxian_studio into feature/feature_preRelease9.0.13  fuyuguang  2022-03-29 09:19:13  a591675a5
+UPDATE  fuyuguang  2022-03-29 09:19:08  d91e7c79f
+update  fuyuguang  2022-03-28 16:34:26  8c53ce0b0
+update  fuyuguang  2022-03-28 16:29:11  360f24019
+update  fuyuguang  2022-03-18 16:42:59  a2b0fba1a
+因IOS中间根据业务需求发布小迭代版本9.0.13，故茅台销售新规需求所在迭代版本号统一修改为：9.0.14  fuyuguang  2022-03-18 10:59:21  66438c340
+Merge branch 'feature/feature_fyg_9.0.14_wapPay' of ssh://gitlab.9ijx.com:9830/android/jiuxian_studio into feature/feature_preRelease9.0.13  fuyuguang  2022-03-18 10:03:13  821041b70
+update  fuyuguang  2022-03-18 10:00:10  1f61c2f7e
+update  团购 vip  支付  fuyuguang  2022-03-14 18:08:46  2bfbf8501
+update  fuyuguang  2022-03-07 17:27:49  c42d5e390
+update  fuyuguang  2022-03-07 17:13:50  dc2001949
+Merge tag 'release_9.0.12.1' into develop  fuyuguang  2022-03-03 14:24:04  6d0064bd9

@@ -1,0 +1,370 @@
+NOTE: appcompat.sh is still under development. It can report
+API uses that do not execute at runtime, and reflection uses
+that do not exist. It can also miss on reflection uses.
+#1: Linking unsupported Landroid/app/Notification;->setLatestEventInfo(Landroid/content/Context;Ljava/lang/CharSequence;Ljava/lang/CharSequence;Landroid/app/PendingIntent;)V use(s):
+       Lcom/xiaomi/push/service/XMPushService;->a(Landroid/content/Context;)Landroid/app/Notification;
+
+#2: Linking unsupported Landroid/graphics/Canvas;->save(I)I use(s):
+       Lcom/amazing/utils/TextMeshUtils;->callIStaticGenerateBitmapForEmoji([BI)Landroid/graphics/Bitmap;
+       Lcom/amazing/utils/TextMeshUtils;->callIStaticGenerateBitmapFromTextMesh([BLjava/lang/String;IIIFIFIFFFIIII)Landroid/graphics/Bitmap;
+       Lnet/lucode/hackware/magicindicator/buildins/commonnavigator/titles/ClipPagerTitleView;->onDraw(Landroid/graphics/Canvas;)V
+
+#3: Linking unsupported Landroid/net/ConnectivityManager;->requestRouteToHost(II)Z use(s):
+       Lcom/mobile/auth/ab/a;->a(Landroid/content/Context;Ljava/lang/String;)Z
+       Lcom/mobile/auth/k/d;->a(Ljava/lang/String;Lcom/mobile/auth/h/f;Lcom/mobile/auth/k/d$b;Ljava/lang/String;)V
+
+#4: Linking unsupported Landroid/net/ConnectivityManager;->startUsingNetworkFeature(ILjava/lang/String;)I use(s):
+       Lcom/mobile/auth/ab/a;->a(Landroid/content/Context;Ljava/lang/String;)Z
+       Lcom/mobile/auth/k/d;->a(Ljava/lang/String;Lcom/mobile/auth/h/f;Lcom/mobile/auth/k/d$b;Ljava/lang/String;)V
+
+#5: Linking unsupported Landroid/net/SSLCertificateSocketFactory;->getHttpSocketFactory(ILandroid/net/SSLSessionCache;)Lorg/apache/http/conn/ssl/SSLSocketFactory; use(s):
+       Lcom/alipay/android/phone/mrpc/core/b;->a(Ljava/lang/String;)Lcom/alipay/android/phone/mrpc/core/b;
+
+#6: Linking unsupported Landroid/telephony/TelephonyManager;->getNeighboringCellInfo()Ljava/util/List; use(s):
+       Lcom/unionpay/sdk/f;->t(Landroid/content/Context;)Lorg/json/JSONArray;
+
+#7: Linking unsupported Ldalvik/system/VMStack;->getCallingClassLoader()Ljava/lang/ClassLoader; use(s):
+       Lcom/tencent/smtt/export/external/DexLoader;-><init>(Ljava/lang/String;Landroid/content/Context;[Ljava/lang/String;Ljava/lang/String;)V
+
+#8: Reflection max-target-p Landroid/animation/LayoutTransition;->cancel use(s):
+       Landroidx/transition/ViewGroupUtilsApi14;->cancelLayoutTransition(Landroid/animation/LayoutTransition;)V
+
+#9: Reflection max-target-p Landroid/animation/ValueAnimator;->sDurationScale use(s):
+       Lcom/opensource/svgaplayer/SVGAImageView;->startAnimation(Lcom/opensource/svgaplayer/SVGARange;Z)V
+
+#10: Reflection unsupported Landroid/app/Activity;->mActivityInfo use(s):
+       Lcom/sina/weibo/sdk/share/BaseActivity;->m()Z
+
+#11: Reflection unsupported Landroid/app/Activity;->mMainThread use(s):
+       Landroidx/core/app/ActivityRecreator;->getMainThreadField()Ljava/lang/reflect/Field;
+
+#12: Reflection unsupported Landroid/app/Activity;->mToken use(s):
+       Landroidx/core/app/ActivityRecreator;->getTokenField()Ljava/lang/reflect/Field;
+
+#13: Reflection unsupported Landroid/app/ActivityManagerNative;->getDefault use(s):
+       Lcom/tencent/bugly/crashreport/common/info/b;->o()I
+
+#14: Reflection unsupported Landroid/app/ActivityThread;->currentActivityThread use(s):
+       Lcom/taobao/accs/AccsClientConfig;->getContext()Landroid/content/Context;
+       Lcom/uc/webview/export/internal/utility/k;->c(Landroid/content/Context;)Ljava/lang/String;
+       Lcom/umeng/commonsdk/statistics/common/DeviceConfig;->getGlobleActivity(Landroid/content/Context;)Landroid/app/Activity;
+       Lcom/umeng/message/proguard/x;->a()Landroid/app/Application;
+       Lanet/channel/util/Utils;->getAppContext()Landroid/content/Context;
+       Lcom/jiuxian/networklib/util/ContextUtil;->getInstance()Landroid/content/Context;
+
+#15: Reflection unsupported Landroid/app/ActivityThread;->currentApplication use(s):
+       Lorg/repackage/com/meizu/flyme/openidsdk/OpenIdHelper;->a()Z
+
+#16: Reflection unsupported Landroid/app/ActivityThread;->getApplication use(s):
+       Lcom/umeng/message/proguard/x;->a()Landroid/app/Application;
+
+#17: Reflection unsupported Landroid/app/ActivityThread;->getProcessName use(s):
+       Lcom/uc/webview/export/internal/utility/k;->c(Landroid/content/Context;)Ljava/lang/String;
+
+#18: Reflection unsupported Landroid/app/ActivityThread;->mActivities use(s):
+       Lcom/umeng/commonsdk/statistics/common/DeviceConfig;->getGlobleActivity(Landroid/content/Context;)Landroid/app/Activity;
+
+#19: Reflection unsupported Landroid/app/AppOpsManager;->OP_POST_NOTIFICATION use(s):
+       Lcom/xiaomi/channel/commonutils/android/b;->d(Landroid/content/Context;Ljava/lang/String;)Lcom/xiaomi/channel/commonutils/android/b$a;
+
+#20: Reflection unsupported Landroid/app/AppOpsManager;->checkOp use(s):
+       Lcom/jiuxian/client/widget/floatwindow/PermissionUtil;->hasPermissionBelowMarshmallow(Landroid/content/Context;)Z
+
+#21: Reflection max-target-p Landroid/app/Dialog;->CANCEL use(s):
+       Lcom/tencent/smtt/sdk/WebView;->destroy()V
+       Lcom/tencent/smtt/sdk/WebView;->destroy()V
+       Lcom/tencent/smtt/sdk/WebView;->destroy()V
+
+#22: Reflection unsupported Landroid/app/Dialog;->mListenersHandler use(s):
+       Lcom/tencent/smtt/sdk/WebView;->destroy()V
+       Lcom/tencent/smtt/sdk/WebView;->destroy()V
+       Lcom/tencent/smtt/sdk/WebView;->destroy()V
+
+#23: Reflection unsupported Landroid/app/Dialog;->mOnKeyListener use(s):
+       Landroidx/core/view/KeyEventDispatcher;->getDialogKeyListenerPre28(Landroid/app/Dialog;)Landroid/content/DialogInterface$OnKeyListener;
+
+#24: Reflection unsupported Landroid/app/Fragment;->mChildFragmentManager use(s):
+       Lcom/app/hubert/guide/core/Controller;->compatibleFragment(Landroid/app/Fragment;)V
+
+#25: Reflection unsupported Landroid/content/ContextWrapper;->mBase use(s):
+       Lcom/uc/webview/export/WebView;->destroy()V
+
+#26: Reflection unsupported,test-api Landroid/content/pm/ActivityInfo;->isTranslucentOrFloating use(s):
+       Lcom/sina/weibo/sdk/share/BaseActivity;->l()Z
+
+#27: Reflection unsupported Landroid/content/pm/ApplicationInfo;->primaryCpuAbi use(s):
+       Lcom/xiaomi/channel/commonutils/android/a;->b(Landroid/content/Context;)Ljava/lang/String;
+
+#28: Reflection max-target-r Landroid/content/pm/PackageParser;->collectCertificates use(s):
+       Lcom/tencent/smtt/utils/b;->a(Ljava/lang/String;I)Landroid/content/pm/PackageInfo;
+       Lcom/uc/webview/export/internal/utility/g$a;->b(Landroid/content/Context;Ljava/lang/String;)[Landroid/content/pm/Signature;
+
+#29: Reflection blocked Landroid/content/pm/PackageParser;->generatePackageInfo use(s):
+       Lcom/tencent/smtt/utils/b;->a(Ljava/lang/String;I)Landroid/content/pm/PackageInfo;
+
+#30: Reflection unsupported Landroid/content/pm/PackageParser;->parsePackage use(s):
+       Lcom/tencent/smtt/utils/b;->a(Ljava/lang/String;I)Landroid/content/pm/PackageInfo;
+       Lcom/uc/webview/export/internal/utility/g$a;->b(Landroid/content/Context;Ljava/lang/String;)[Landroid/content/pm/Signature;
+
+#31: Reflection unsupported Landroid/content/res/AssetManager;->addAssetPath use(s):
+       Lcom/amap/api/mapcore/util/df;->a(Landroid/content/Context;)Landroid/content/res/AssetManager;
+       Lcom/amap/api/mapcore/util/el;->a(Ljava/lang/String;)Landroid/content/res/AssetManager;
+
+#32: Reflection blocked Landroid/content/res/Resources$Theme;->rebase use(s):
+       Landroidx/core/content/res/ResourcesCompat$ThemeCompat$ImplApi23;->rebase(Landroid/content/res/Resources$Theme;)V
+
+#33: Reflection unsupported Landroid/content/res/Resources;->mResourcesImpl use(s):
+       Landroidx/appcompat/app/ResourcesFlusher;->flushNougats(Landroid/content/res/Resources;)V
+
+#34: Reflection unsupported Landroid/graphics/Bitmap;->setNinePatchChunk use(s):
+       Lcom/amap/api/mapcore/util/da;->a(Ljava/io/InputStream;)Landroid/graphics/Bitmap;
+
+#35: Reflection unsupported Landroid/graphics/Typeface;->createFromFamiliesWithDefault use(s):
+       Landroidx/core/graphics/TypefaceCompatApi21Impl;->init()V
+       Landroidx/core/graphics/TypefaceCompatApi24Impl;-><clinit>()V
+       Landroidx/core/graphics/TypefaceCompatApi26Impl;->obtainCreateFromFamiliesWithDefaultMethod(Ljava/lang/Class;)Ljava/lang/reflect/Method;
+       Landroidx/core/graphics/TypefaceCompatApi28Impl;->obtainCreateFromFamiliesWithDefaultMethod(Ljava/lang/Class;)Ljava/lang/reflect/Method;
+
+#36: Reflection unsupported Landroid/graphics/Typeface;->native_instance use(s):
+       Landroidx/core/graphics/TypefaceCompatBaseImpl;->getUniqueKey(Landroid/graphics/Typeface;)J
+
+#37: Reflection max-target-p Landroid/graphics/drawable/GradientDrawable;->mGradientState use(s):
+       Lcom/alibaba/security/tools/flexible/build/c;->a(Landroid/view/View;Ljava/math/BigDecimal;)V
+
+#38: Reflection unsupported Landroid/graphics/drawable/NinePatchDrawable$NinePatchState;->mNinePatch use(s):
+       Lcom/unionpay/tsmservice/widget/UPSaftyKeyboard;->d(Landroid/graphics/drawable/Drawable;)Lcom/unionpay/tsmservice/data/NinePatchInfo;
+
+#39: Reflection unsupported Landroid/media/AudioAttributes;->toLegacyStreamType use(s):
+       Landroidx/media/AudioAttributesImplApi21;->getAudioAttributesToLegacyStreamTypeMethod()Ljava/lang/reflect/Method;
+
+#40: Reflection unsupported Landroid/media/AudioSystem;->setForceUse use(s):
+       Lcn/xiaoneng/activity/ChatActivity;->setSpeakerphoneOn(Z)V
+       Lcn/xiaoneng/adapter/ChatMsgAdapter;->setSpeakerphoneOn(Z)V
+
+#41: Reflection unsupported Landroid/media/session/MediaSession;->getCallingPackage use(s):
+       Landroid/support/v4/media/session/MediaSessionCompatApi24;->getCallingPackage(Ljava/lang/Object;)Ljava/lang/String;
+
+#42: Reflection unsupported Landroid/net/ConnectivityManager;->getMobileDataEnabled use(s):
+       Lcom/mobile/auth/ab/f;->a(Landroid/net/ConnectivityManager;)Z
+       Lcom/mobile/auth/d/f;->d(Landroid/content/Context;)Z
+       Lcom/mobile/auth/gatewayauth/utils/c;->f(Landroid/content/Context;)Z
+       Lcom/mobile/auth/k/t;->a(Landroid/content/Context;Landroid/net/ConnectivityManager;)Z
+
+#43: Reflection unsupported Landroid/net/ConnectivityManager;->requestRouteToHost use(s):
+       Lcom/mobile/auth/d/e;->b(Landroid/content/Context;Ljava/lang/String;)Z
+       Lcom/mobile/auth/d/e;->b(Landroid/content/Context;Ljava/lang/String;)Z
+       Lcom/mobile/auth/p/d;->a(Landroid/content/Context;Ljava/lang/String;)Z
+
+#44: Reflection unsupported Landroid/net/ConnectivityManager;->startUsingNetworkFeature use(s):
+       Lcom/mobile/auth/d/e;->b(Landroid/content/Context;Ljava/lang/String;)Z
+       Lcom/mobile/auth/p/d;->a(Landroid/content/Context;Ljava/lang/String;)Z
+
+#45: Reflection unsupported Landroid/os/Build;->getString use(s):
+       Lcom/umeng/commonsdk/internal/utils/a;->d()Ljava/lang/String;
+       Lcom/umeng/umzid/ZIDManager;->a(Landroid/content/Context;Lorg/json/JSONObject;)Lorg/json/JSONObject;
+
+#46: Reflection unsupported Landroid/os/Bundle;->getIBinder use(s):
+       Landroidx/core/app/BundleCompat$BundleCompatBaseImpl;->getBinder(Landroid/os/Bundle;Ljava/lang/String;)Landroid/os/IBinder;
+
+#47: Reflection unsupported Landroid/os/Bundle;->putIBinder use(s):
+       Landroidx/core/app/BundleCompat$BundleCompatBaseImpl;->putBinder(Landroid/os/Bundle;Ljava/lang/String;Landroid/os/IBinder;)V
+
+#48: Reflection unsupported Landroid/os/Process;->readProcFile use(s):
+       Lcom/aliyun/utils/CpuProcessTracker;-><init>()V
+
+#49: Reflection unsupported Landroid/os/Trace;->TRACE_TAG_APP use(s):
+       Landroidx/tracing/Trace;->isEnabledFallback()Z
+
+#50: Reflection unsupported Landroid/os/Trace;->asyncTraceBegin use(s):
+       Landroidx/tracing/Trace;->beginAsyncSectionFallback(Ljava/lang/String;I)V
+
+#51: Reflection unsupported Landroid/os/Trace;->asyncTraceEnd use(s):
+       Landroidx/tracing/Trace;->endAsyncSectionFallback(Ljava/lang/String;I)V
+
+#52: Reflection unsupported Landroid/os/Trace;->isTagEnabled use(s):
+       Landroidx/tracing/Trace;->isEnabledFallback()Z
+
+#53: Reflection unsupported Landroid/os/Trace;->traceCounter use(s):
+       Landroidx/tracing/Trace;->setCounterFallback(Ljava/lang/String;I)V
+
+#54: Reflection unsupported,test-api Landroid/os/UserHandle;->isApp use(s):
+       Landroidx/core/os/ProcessCompat$Api17Impl;->isApplicationUid(I)Z
+
+#55: Reflection unsupported Landroid/os/storage/StorageManager;->getVolumeList use(s):
+       Lcom/autonavi/base/amap/mapcore/FileUtil;->getExternalStroragePath(Landroid/content/Context;)Ljava/lang/String;
+
+#56: Reflection unsupported Landroid/os/storage/StorageManager;->getVolumeState use(s):
+       Lcom/autonavi/base/amap/mapcore/FileUtil;->getExternalStroragePath(Landroid/content/Context;)Ljava/lang/String;
+
+#57: Reflection unsupported Landroid/service/media/MediaBrowserService$Result;->mFlags use(s):
+       Landroidx/media/MediaBrowserServiceCompatApi26;-><clinit>()V
+
+#58: Reflection unsupported Landroid/telephony/SubscriptionManager;->getDefaultDataSubscriptionInfo use(s):
+       Lanet/channel/status/b;->h()V
+       Lanet/channel/status/b;->h()V
+
+#59: Reflection max-target-p Landroid/telephony/TelephonyManager;->getDataNetworkType use(s):
+       Lcom/mobile/auth/g/b;->f(Landroid/content/Context;)I
+
+#60: Reflection max-target-p Landroid/telephony/TelephonyManager;->getDefault use(s):
+       Lcom/unionpay/sdk/f;->B(Landroid/content/Context;)Lorg/json/JSONArray;
+
+#61: Reflection unsupported Landroid/util/DisplayMetrics;->noncompatDensityDpi use(s):
+       Lcom/autonavi/base/ae/gmap/GLMapEngine;->adapterDpiScale(Landroid/util/DisplayMetrics;III)F
+
+#62: Reflection unsupported Landroid/util/DisplayMetrics;->noncompatHeightPixels use(s):
+       Lcom/autonavi/base/ae/gmap/GLMapEngine;->adapterDpiScale(Landroid/util/DisplayMetrics;III)F
+       Lcom/umeng/message/proguard/e;->l(Landroid/content/Context;)Ljava/lang/String;
+
+#63: Reflection unsupported Landroid/util/DisplayMetrics;->noncompatWidthPixels use(s):
+       Lcom/autonavi/base/ae/gmap/GLMapEngine;->adapterDpiScale(Landroid/util/DisplayMetrics;III)F
+       Lcom/autonavi/base/ae/gmap/GLMapEngine;->adapterDpiScale(Landroid/util/DisplayMetrics;III)F
+       Lcom/umeng/message/proguard/e;->l(Landroid/content/Context;)Ljava/lang/String;
+
+#64: Reflection unsupported Landroid/view/LayoutInflater;->mFactory use(s):
+       Lcom/noober/background/BackgroundLibrary;->forceSetFactory2(Landroid/view/LayoutInflater;)V
+
+#65: Reflection unsupported Landroid/view/LayoutInflater;->mFactory2 use(s):
+       Lcom/noober/background/BackgroundLibrary;->forceSetFactory2(Landroid/view/LayoutInflater;)V
+       Landroidx/core/view/LayoutInflaterCompat;->forceSetFactory2(Landroid/view/LayoutInflater;Landroid/view/LayoutInflater$Factory2;)V
+
+#66: Reflection max-target-q Landroid/view/View$AttachInfo;->mContentInsets use(s):
+       Landroidx/core/view/WindowInsetsCompat$Api21ReflectionHolder;-><clinit>()V
+
+#67: Reflection max-target-q Landroid/view/View$AttachInfo;->mStableInsets use(s):
+       Landroidx/core/view/WindowInsetsCompat$Api21ReflectionHolder;-><clinit>()V
+
+#68: Reflection max-target-q Landroid/view/View$AttachInfo;->mVisibleInsets use(s):
+       Landroidx/core/view/WindowInsetsCompat$Impl20;->loadReflectionField()V
+
+#69: Reflection unsupported Landroid/view/View;->computeFitSystemWindows use(s):
+       Landroidx/appcompat/widget/ViewUtils;-><clinit>()V
+
+#70: Reflection unsupported Landroid/view/View;->getViewRootImpl use(s):
+       Landroidx/core/view/WindowInsetsCompat$Impl20;->loadReflectionField()V
+
+#71: Reflection unsupported Landroid/view/View;->mAccessibilityDelegate use(s):
+       Landroidx/core/view/ViewCompat;->getAccessibilityDelegateThroughReflection(Landroid/view/View;)Landroid/view/View$AccessibilityDelegate;
+
+#72: Reflection max-target-p Landroid/view/View;->mAttachInfo use(s):
+       Landroidx/core/view/WindowInsetsCompat$Api21ReflectionHolder;-><clinit>()V
+
+#73: Reflection max-target-p Landroid/view/View;->mViewFlags use(s):
+       Landroidx/transition/ViewUtilsBase;->setTransitionVisibility(Landroid/view/View;I)V
+
+#74: Reflection max-target-p Landroid/view/View;->setFrame use(s):
+       Landroidx/transition/ViewUtilsBase;->fetchSetFrame()V
+
+#75: Reflection blocked Landroid/view/inputmethod/InputMethodManager;->mCurRootView use(s):
+       Lcom/jiuxian/client/util/InputMethodLeaksHelper;->fixInputMethodManagerLeak(Landroid/content/Context;)V
+
+#76: Reflection max-target-p Landroid/view/inputmethod/InputMethodManager;->mH use(s):
+       Landroidx/activity/ImmLeaksCleaner;->initializeReflectiveFields()V
+
+#77: Reflection unsupported Landroid/widget/AbsListView;->mIsChildViewEnabled use(s):
+       Landroidx/appcompat/widget/DropDownListView;-><init>(Landroid/content/Context;Z)V
+
+#78: Reflection max-target-p Landroid/widget/AutoCompleteTextView;->doAfterTextChanged use(s):
+       Landroidx/appcompat/widget/SearchView$PreQAutoCompleteTextViewReflector;-><init>()V
+
+#79: Reflection max-target-p Landroid/widget/AutoCompleteTextView;->doBeforeTextChanged use(s):
+       Landroidx/appcompat/widget/SearchView$PreQAutoCompleteTextViewReflector;-><init>()V
+
+#80: Reflection max-target-p Landroid/widget/AutoCompleteTextView;->ensureImeVisible use(s):
+       Landroidx/appcompat/widget/SearchView$PreQAutoCompleteTextViewReflector;-><init>()V
+
+#81: Reflection max-target-p Landroid/widget/ImageView;->mDrawMatrix use(s):
+       Landroidx/transition/ImageViewUtils;->fetchDrawMatrixField()V
+
+#82: Reflection max-target-p Landroid/widget/ImageView;->mMaxHeight use(s):
+       Lcom/nostra13/universalimageloader/core/imageaware/ImageViewAware;->getHeight()I
+
+#83: Reflection max-target-p Landroid/widget/ImageView;->mMaxWidth use(s):
+       Lcom/nostra13/universalimageloader/core/imageaware/ImageViewAware;->getWidth()I
+
+#84: Reflection unsupported Landroid/widget/OverScroller;->mScrollerY use(s):
+       Lcom/jiuxian/client/widget/parentrecyclerview/BaseRecyclerView;-><init>(Landroid/content/Context;Landroid/util/AttributeSet;I)V
+
+#85: Reflection max-target-p Landroid/widget/TextView;->getHorizontallyScrolling use(s):
+       Landroidx/appcompat/widget/AppCompatTextViewAutoSizeHelper$Impl;->isHorizontallyScrollable(Landroid/widget/TextView;)Z
+
+#86: Reflection unsupported Landroid/widget/TextView;->getLayoutAlignment use(s):
+       Landroidx/appcompat/widget/AppCompatTextViewAutoSizeHelper;->suggestedSizeFitsInSpace(ILandroid/graphics/RectF;)Z
+
+#87: Reflection max-target-p Landroid/widget/TextView;->mCursorDrawableRes use(s):
+       Lcom/google/android/material/timepicker/TimePickerTextInputPresenter;->setCursorDrawableColor(Landroid/widget/EditText;I)V
+
+#88: Reflection unsupported Landroid/widget/TextView;->mEditor use(s):
+       Lcom/google/android/material/timepicker/TimePickerTextInputPresenter;->setCursorDrawableColor(Landroid/widget/EditText;I)V
+
+#89: Reflection unsupported Landroid/widget/TextView;->mIncludePad use(s):
+       Landroidx/appcompat/widget/AppCompatTextViewAutoSizeHelper;->createStaticLayoutForMeasuringPre16(Ljava/lang/CharSequence;Landroid/text/Layout$Alignment;I)Landroid/text/StaticLayout;
+
+#90: Reflection unsupported Landroid/widget/TextView;->mSpacingAdd use(s):
+       Landroidx/appcompat/widget/AppCompatTextViewAutoSizeHelper;->createStaticLayoutForMeasuringPre16(Ljava/lang/CharSequence;Landroid/text/Layout$Alignment;I)Landroid/text/StaticLayout;
+
+#91: Reflection unsupported Landroid/widget/TextView;->mSpacingMult use(s):
+       Landroidx/appcompat/widget/AppCompatTextViewAutoSizeHelper;->createStaticLayoutForMeasuringPre16(Ljava/lang/CharSequence;Landroid/text/Layout$Alignment;I)Landroid/text/StaticLayout;
+
+#92: Reflection unsupported Landroid/widget/TextView;->nullLayouts use(s):
+       Landroidx/appcompat/widget/AppCompatTextViewAutoSizeHelper;->setRawTextSize(F)V
+
+#93: Reflection max-target-p Landroid/widget/Toast;->mTN use(s):
+       Lcom/jiuxian/client/widget/floatwindow/FloatToast;->initTN()V
+       Lcom/jiuxian/client/widget/toast/SafeToast;-><init>(Landroid/app/Application;)V
+
+#94: Reflection max-target-q Lcom/android/internal/R$dimen;->status_bar_height use(s):
+       Lcom/shangzhu/visiualfunc/AccelerometerSensorListener;->getStatusHeight(Landroid/content/Context;)I
+       Lcom/shangzhu/visiualfunc/CustomCircleView;->getStatusHeight(Landroid/content/Context;)I
+       Lcom/alibaba/security/common/utils/UIUtils;->getStatusBarHeight(Landroid/content/Context;)I
+       Lcom/jiuxian/client/comm/TDevice;->getStatuBarHeight()I
+       Lcom/jiuxian/client/comm/TDevice;->getStatusBarHeight()I
+
+#95: Reflection max-target-q Lcom/android/internal/R$styleable;->Window use(s):
+       Lcom/sina/weibo/sdk/share/BaseActivity;->l()Z
+
+#96: Reflection unsupported Lcom/android/internal/os/PowerProfile;->getAveragePower use(s):
+       Lcom/weibo/ssosdk/MfpBuilder;->getBatteryCapacity(Landroid/content/Context;)D
+
+#97: Reflection max-target-o Lcom/android/internal/view/menu/MenuBuilder;->removeItemAt use(s):
+       Landroidx/core/widget/TextViewCompat$OreoCallback;->recomputeProcessTextMenuItems(Landroid/view/Menu;)V
+
+#98: Reflection max-target-q,core-platform-api Lcom/android/org/conscrypt/OpenSSLSocketImpl;->getAlpnSelectedProtocol use(s):
+       Lokhttp3/internal/platform/AndroidPlatform;->buildIfSupported()Lokhttp3/internal/platform/Platform;
+
+#99: Reflection max-target-q,core-platform-api Lcom/android/org/conscrypt/OpenSSLSocketImpl;->setAlpnProtocols use(s):
+       Lokhttp3/internal/platform/AndroidPlatform;->buildIfSupported()Lokhttp3/internal/platform/Platform;
+
+#100: Reflection max-target-q,core-platform-api Lcom/android/org/conscrypt/OpenSSLSocketImpl;->setHostname use(s):
+       Lokhttp3/internal/platform/AndroidPlatform;->buildIfSupported()Lokhttp3/internal/platform/Platform;
+
+#101: Reflection max-target-q,core-platform-api Lcom/android/org/conscrypt/OpenSSLSocketImpl;->setUseSessionTickets use(s):
+       Lokhttp3/internal/platform/AndroidPlatform;->buildIfSupported()Lokhttp3/internal/platform/Platform;
+
+#102: Reflection unsupported,core-platform-api Ldalvik/system/CloseGuard;->get use(s):
+       Lokhttp3/internal/platform/AndroidPlatform$CloseGuard;->get()Lokhttp3/internal/platform/AndroidPlatform$CloseGuard;
+
+#103: Reflection unsupported,core-platform-api Ldalvik/system/CloseGuard;->open use(s):
+       Lokhttp3/internal/platform/AndroidPlatform$CloseGuard;->get()Lokhttp3/internal/platform/AndroidPlatform$CloseGuard;
+
+#104: Reflection unsupported,core-platform-api Ldalvik/system/CloseGuard;->warnIfOpen use(s):
+       Lokhttp3/internal/platform/AndroidPlatform$CloseGuard;->get()Lokhttp3/internal/platform/AndroidPlatform$CloseGuard;
+
+#105: Reflection unsupported,core-platform-api Ljava/lang/Thread;->getUncaughtExceptionPreHandler use(s):
+       Lkotlinx/coroutines/android/AndroidExceptionPreHandler;->preHandler()Ljava/lang/reflect/Method;
+
+#106: Reflection unsupported Lsun/misc/Unsafe;->allocateInstance use(s):
+       Lcom/google/gson/internal/UnsafeAllocator;->create()Lcom/google/gson/internal/UnsafeAllocator;
+
+#107: Reflection unsupported Lsun/misc/Unsafe;->theUnsafe use(s):
+       Lcom/google/gson/internal/UnsafeAllocator;->create()Lcom/google/gson/internal/UnsafeAllocator;
+
+107 hidden API(s) used: 7 linked against, 100 through reflection
+	74 in unsupported
+	3 in blocked
+	1 in max-target-o
+	19 in max-target-p
+	9 in max-target-q
+	1 in max-target-r
+To run an analysis that can give more reflection accesses, 
+but could include false positives, pass the --imprecise flag. 

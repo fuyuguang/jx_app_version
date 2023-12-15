@@ -1,0 +1,18 @@
+Merge branch 'release/release_9.1.12'  fuyuguang  2023-08-04 15:52:29  0c7e14445
+Merge branch 'feature/feature_preRelease_9.1.12' into develop  fuyuguang  2023-08-04 15:50:53  9a7034301
+add test file  fuyuguang  2023-08-03 17:03:42  7ea657603
+B2CShopMainFragment 单击立即送，取消定位权限，要显示 【当前定位暂无立即配送门店】 而非 空view  fuyuguang  2023-08-02 11:14:49  0fd4bdb0c
+MainHomeFragment.java 开启定位权限布局 和 返回顶部按钮 更换位置 fragment_mainhome_new.xml 文件  fuyuguang  2023-08-02 10:26:41  692f8db9f
+启动后没有定位权限弹浮窗，有定位权限直接调用 initTongDun 方法 原逻辑  fuyuguang  2023-08-01 15:21:47  9ad81ab5c
+首页添加开启定位权限浮窗逻辑  fuyuguang  2023-08-01 11:12:43  81cbacaa7
+有缓存，就不显示弹出，没有缓存就显示弹框  fuyuguang  2023-07-31 16:57:40  4e4d5a8f3
+单击 19 分支送 按钮 判断逻辑同 B2CShopMainFragment.java:855  没有缓存地址&& 没有开启定位权限就弹框申请  fuyuguang  2023-07-31 16:05:09  5e5d28a74
+没有缓存地址&& 没有开启定位权限就弹框申请&& 及每次进入都走refreshData() 方法  fuyuguang  2023-07-31 15:55:48  621b20de8
+Merge branch 'feature/feature_fyg_9.1.12_首次打开app进行功能操作前不得提前弹框申请权限' of ssh://gitlab.9ijx.com:9830/android/jiuxian_studio into feature/feature_preRelease_9.1.12  fuyuguang  2023-07-28 15:47:57  63e8a5486
+Merge branch 'feature/feature_fyg_9.1.12_我的页面增加拼团和招聘关注的主播和金币由服务端控制' of ssh://gitlab.9ijx.com:9830/android/jiuxian_studio into feature/feature_preRelease_9.1.12  fuyuguang  2023-07-28 15:34:16  817680fc7
+要根据sort 排序，客户端进行了排序，把排序规则去掉，有服务端顺序返回  fuyuguang  2023-07-28 15:32:28  f47945aac
+Merge branch 'feature/feature_fyg_9.1.12_我的页面增加拼团和招聘关注的主播和金币由服务端控制' of ssh://gitlab.9ijx.com:9830/android/jiuxian_studio into feature/feature_preRelease_9.1.12  fuyuguang  2023-07-28 10:26:22  c53566118
+APP应用图标更换  fuyuguang  2023-07-28 10:25:31  fb7f2e7bf
+我的页面增加拼团和招聘关注的主播和金币由服务端控制  fuyuguang  2023-07-28 10:07:25  749ab4892
+update  首次打开app进行功能操作前不得提前弹框申请权限 流程待梳理  fuyuguang  2023-07-28 09:11:47  499e38ed3
+Merge tag 'release_9.1.11' into develop  fuyuguang  2023-07-17 10:25:37  c6b6c8420

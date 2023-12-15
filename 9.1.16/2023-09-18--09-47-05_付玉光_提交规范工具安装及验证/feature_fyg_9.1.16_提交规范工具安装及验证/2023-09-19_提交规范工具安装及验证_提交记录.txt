@@ -1,0 +1,30 @@
+-n 
+第1次提交:
+commitTime: 2023/09/19-16:56:42    branchName: feature/feature_fyg_9.1.16_提交规范工具安装及验证    Commit: 1d727d137
+delete ref package-lock.json package.json
+
+Changed files:
+package-lock.json
+package.json
+
+
+第2次提交:
+commitTime: 2023/09/19-17:01:11    branchName: feature/feature_fyg_9.1.16_提交规范工具安装及验证    Commit: 1f24544f3
+fix(app.properties): 修改构建信息 & 版本升级
+修改构建信息 & 版本升级 & 测试代码
+
+BREAKING CHANGE: 不兼容的版本，该功能新开发并重构之前的代码
+Changed files:
+buildConfig/app.properties
+
+
+第3次提交:
+commitTime: 2023/09/19-18:36:35    branchName: feature/feature_fyg_9.1.16_提交规范工具安装及验证    Commit: 9bbd579b7
+fix(xxx): test
+test
+
+test
+Changed files:
+buildConfig/app.properties
+
+

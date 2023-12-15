@@ -1,0 +1,9 @@
+feat: 腾讯乐固关闭在模拟器上运行  fuyuguang  2023-11-21 10:08:53  e7a4342b6
+feat: 双12更换icon  fuyuguang  2023-11-21 10:04:32  49f0caf24
+feat: 适配android11_腾讯乐固支持在模拟器上运行  fuyuguang  2023-11-09 10:47:49  b527272d2
+feat: 适配android11_APP升级下载的apk存储位置变更，升级后删除对应的app安装包，优化性能  fuyuguang  2023-11-08 18:38:31  40f50d255
+feat: 适配android11_头像或图片存储位置变更_应用无法在外部存储设备上创建自己的应用专用目录  fuyuguang  2023-11-07 16:53:58  0f3a098db
+feat: 适配android11_getExternalMediaDirs最小支持版本api21  fuyuguang  2023-11-07 16:52:48  9d8a43142
+feat: 适配android11_兼容第三方媒体库_使用直接文件路径和原生库访问文件  fuyuguang  2023-11-07 16:50:39  edb6be703
+feat: 适配android11_软件包可见性_判断是否安装支付宝app&与其他应用交互 intent需授予对URI的访问权  fuyuguang  2023-11-06 17:03:19  760f24df5
+feat: 适配android11_解决安装解析失败没有证书问题  fuyuguang  2023-11-01 15:57:47  f52e9f5d6

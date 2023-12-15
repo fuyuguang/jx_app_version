@@ -1,0 +1,5 @@
+[HTML 如何在HTML文件中包含Markdown(.md)文件|极客教程](https://geek-docs.com/html/html-ask-answer/407_html_how_to_include_markdown_md_files_inside_html_files.html)
+
+1、“–standalone”
+为目标格式文件增加合适的“header”和“footer”。如果目标格式是“HTML”，那么通过该选项可解决“由于未设置合适的字符编码，而导致的乱码问题”。
+2、“–self-contained”

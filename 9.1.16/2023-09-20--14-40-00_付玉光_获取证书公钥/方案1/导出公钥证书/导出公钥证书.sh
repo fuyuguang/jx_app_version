@@ -1,0 +1,21 @@
+#[android keystore 公钥,私钥,证书完全解析](https://blog.51cto.com/u_15861646/5823235)
+
+jksLoc="/Users/fuyuguang/jiuxian_studio/jiuxian/release.keystore"
+jksPwd="415263"
+alias="jiuxian_alias"
+
+
+keytool -export -alias ${alias} -keystore ${jksLoc} -file test.cer
+
+#用钥匙串访问
+
+# finder中双击打开 test.cer，查看 公钥信息，去空格，转小写
+#通过 apk生成的方式
+#a1d10604329eea5f93ce75ab6bd428df70516cab72a947726e6de2fdf081cbfcbc15bdd1f31a9292a74d0ffbc191c6e746acfa66de3f728ffee940e789146934f2f5ad4743f939b64ae9e72610203d941782f968aff0145c2f8832c4bc901019ef9325f04d361f0d2bec6b9ab2c52b8e284931b5dd270f40e75f53d9fe6518b5e75f27c3318483a01747a30797e374215039399c2f47c792eb484b5cc6cfd90bc4895c7557cde65c608512c5b6ec2e0b3e92495fdbb828d2aa03054ce990ec23d6c55a5a9fc0e8e11b8a46e9f5935e5d41f9fbfd90094c0028d5d4d5c90e4b624568f4209adb6e5df88e7b844b60fc0c7efee1b63e85170ee3b1d59f095217df
+
+
+
+#私钥提取
+#私钥的提取稍微繁琐了一点。但是有现成提取方法也不必担心
+#但是我们无法通过KEYTOOL工具来提取私钥的..我们只能通过java的KeyStore类getEntry() 或者getKey()来提取私钥
+

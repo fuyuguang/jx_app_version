@@ -1,0 +1,28 @@
+-n 
+a1:
+commitTime: 2023/09/06-09:04:03    branchName: feature/feature_fyg_9.1.14_app中用WebviewActivity打开club页面时要传递区域id给到wap页    Commit: 8aeb34239
+Message: 修改UI，预留一个UI特性待上线，下个版本补上【tab跟随页面滑动而非固定】
+Changed files:
+jiuxian/src/main/java/com/jiuxian/client/adapter/AssociatedProductAdapter.kt
+jiuxian/src/main/java/com/jiuxian/client/fragment/ProductCommentsFragment.java
+jiuxian/src/main/java/com/jiuxian/client/ui/ProductDetailActivity.java
+jiuxian/src/main/java/com/jiuxian/client/widget/dialog/SwitchProductDialog.java
+jiuxian/src/main/res/layout/activity_product_details.xml
+jiuxian/src/main/res/layout/common_title_left_image_right_text.xml
+jiuxian/src/main/res/layout/dialog_switch_product.xml
+jiuxian/src/main/res/layout/fragment_product_comments_parent.xml
+jiuxian/src/main/res/layout/item_associated_product_adapter.xml
+jiuxian/src/main/res/layout/item_commendstab_list.xml
+jiuxian/src/main/res/layout/part_comment_tag.xml
+jiuxian/src/main/res/values/colors.xml
+jiuxian/src/main/res/values/strings.xml
+jiuxian/src/main/res/values/styles.xml
+
+
+a2:
+commitTime: 2023/09/06-10:05:53    branchName: feature/feature_fyg_9.1.14_app中用WebviewActivity打开club页面时要传递区域id给到wap页    Commit: 4de16be07
+Message: 2023-09-06--09-51-41_付玉光_app中用WebviewActivity打开club页面时要传递区域id给到wap页 feature_fyg_9.1.14_app中用WebviewActivity打开club页面时要传递区域id给到wap页
+Changed files:
+jiuxian/src/main/java/com/jiuxian/client/util/WebViewUtil.java
+
+

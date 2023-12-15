@@ -1,0 +1,203 @@
+a1:
+commitTime: 2023/07/31-15:55:48    branchName: feature/feature_preRelease_9.1.12    Commit: 621b20de8
+Message: 没有缓存地址&& 没有开启定位权限就弹框申请&& 及每次进入都走refreshData() 方法
+Changed files:
+jiuxian/src/main/java/com/jiuxian/client/fragment/B2CShopMainFragment.java
+jiuxian/src/main/java/com/jiuxian/client/fragment/MainFragmentTab.java
+Changed_codes:
+
+diff --git a/jiuxian/src/main/java/com/jiuxian/client/fragment/B2CShopMainFragment.java b/jiuxian/src/main/java/com/jiuxian/client/fragment/B2CShopMainFragment.java
+index abf9ac322..b8d160cd1 100644
+--- a/jiuxian/src/main/java/com/jiuxian/client/fragment/B2CShopMainFragment.java
++++ b/jiuxian/src/main/java/com/jiuxian/client/fragment/B2CShopMainFragment.java
+@@ -748,7 +748,7 @@ public class B2CShopMainFragment extends BaseLazyXFragment implements View.OnCli
+         if (!mIsLoad) {
+             if (mB2CMainShopBean == null) {
+ 
+-                requestShopId();
++//                requestShopId();
+             }
+         }
+     }
+@@ -791,10 +791,7 @@ public class B2CShopMainFragment extends BaseLazyXFragment implements View.OnCli
+         layout_empty.setVisibility(showEmpty ? View.VISIBLE : View.GONE);
+         ll_data.setVisibility(showEmpty ? View.GONE : View.VISIBLE);
+ 
+-        if (mActivity instanceof MainActivity){
+-            MainActivity activity = (MainActivity) mActivity;
+-            activity.initTongDun(null);
+-        }
++
+     }
+ 
+     private void setTipContent(String one, String two) {
+@@ -840,6 +837,8 @@ public class B2CShopMainFragment extends BaseLazyXFragment implements View.OnCli
+         updateHomeBannerStopState(true);
+     }
+ 
++
++
+     @Override
+     public void onPause() {
+         super.onPause();
+@@ -853,9 +852,15 @@ public class B2CShopMainFragment extends BaseLazyXFragment implements View.OnCli
+ 
+     @Override
+     public void refreshData() {
+-
+-        requestShopId();
+-
+-
++        //没有缓存地址&& 没有开启定位权限就弹框申请
++        if (JZKUserDataHelper.getJZKSelectedLocation() == null && mActivity instanceof MainActivity ){
++            MainActivity activity = (MainActivity) mActivity;
++            activity.initTongDun(new Runnable() {
++                @Override
++                public void run() {
++                    requestShopId();
++                }
++            });
++        }
+     }
+ }
+diff --git a/jiuxian/src/main/java/com/jiuxian/client/fragment/MainFragmentTab.java b/jiuxian/src/main/java/com/jiuxian/client/fragment/MainFragmentTab.java
+index 0d679610b..1258b522a 100644
+--- a/jiuxian/src/main/java/com/jiuxian/client/fragment/MainFragmentTab.java
++++ b/jiuxian/src/main/java/com/jiuxian/client/fragment/MainFragmentTab.java
+@@ -246,12 +246,18 @@ public class MainFragmentTab extends BaseFragment implements View.OnClickListene
+             }
+             if (position!=currentPosition){
+                 currentPosition=position;
+-                EnableRefresh enableRefresh = (EnableRefresh) mFragmentManager.findFragmentByTag("f" + position);
+-                if (enableRefresh!=null){
+-                    enableRefresh.refreshData();
+-                }
+-            }
+ 
++                mMagicIndicator.post(new Runnable() {
++                    @Override
++                    public void run() {
++                        EnableRefresh enableRefresh = (EnableRefresh) mFragmentManager.findFragmentByTag("f" + position);
++                        if (enableRefresh!=null){
++                            enableRefresh.refreshData();
++                        }
++                    }
++                });
++
++            }
+         }
+ 
+         @Override
+
+
+a2:
+commitTime: 2023/07/31-16:05:09    branchName: feature/feature_preRelease_9.1.12    Commit: 5e5d28a74
+Message: 单击 19 分支送 按钮 判断逻辑同 B2CShopMainFragment.java:855  没有缓存地址&& 没有开启定位权限就弹框申请
+Changed files:
+jiuxian/src/main/java/com/jiuxian/client/ui/MainActivity.java
+Changed_codes:
+
+diff --git a/jiuxian/src/main/java/com/jiuxian/client/ui/MainActivity.java b/jiuxian/src/main/java/com/jiuxian/client/ui/MainActivity.java
+index e41b9f6ab..eb0b4d6bc 100644
+--- a/jiuxian/src/main/java/com/jiuxian/client/ui/MainActivity.java
++++ b/jiuxian/src/main/java/com/jiuxian/client/ui/MainActivity.java
+@@ -45,6 +45,7 @@ import com.jiuxian.api.util.Callback;
+ import com.jiuxian.api.util.JsonWarpperApi;
+ import com.jiuxian.client.AppEnv;
+ import com.jiuxian.client.DebugMode;
++import com.jiuxian.client.adapter.FragmentAdapter;
+ import com.jiuxian.client.bean.NearShopInfo;
+ import com.jiuxian.client.comm.AppContext;
+ import com.jiuxian.client.comm.Constants;
+@@ -1396,13 +1397,19 @@ public class MainActivity extends BaseActivity implements OnClickListener, ViewP
+                     ActivityCenter.gotoWebViewActivity(mActivity, UserDataHelper.getMainWinefastWebUrl());
+                     return;
+                 }
+-                initTongDun(new Runnable() {
+-                    @Override
+-                    public void run() {
+-                        changeTab(TabType.O2OSHOP);
+-                        JiuJiuClickUtil.click(getString(R.string.jiujiu_home), getString(R.string.jiujiu_click_classify));
+-                    }
+-                });
++                if (JZKUserDataHelper.getJZKSelectedLocation() == null){
++                    initTongDun(new Runnable() {
++                        @Override
++                        public void run() {
++                            changeTab(TabType.O2OSHOP);
++                            JiuJiuClickUtil.click(getString(R.string.jiujiu_home), getString(R.string.jiujiu_click_classify));
++                        }
++                    });
++                }else{
++                    changeTab(TabType.O2OSHOP);
++                    JiuJiuClickUtil.click(getString(R.string.jiujiu_home), getString(R.string.jiujiu_click_classify));
++                }
++
+ //                if (mPosition == 0) {//当前在首页
+ //                    if (mCurrentFragment instanceof MainFragmentTab) {
+ //                        MainFragmentTab mainFragmentTab = ((MainFragmentTab) mCurrentFragment);
+
+
+a3:
+commitTime: 2023/07/31-16:57:40    branchName: feature/feature_preRelease_9.1.12    Commit: 4e4d5a8f3
+Message: 有缓存，就不显示弹出，没有缓存就显示弹框
+Changed files:
+jiuxian/src/main/java/com/jiuxian/client/fragment/B2CShopMainFragment.java
+jiuxian/src/main/java/com/jiuxian/client/ui/MainActivity.java
+Changed_codes:
+
+diff --git a/jiuxian/src/main/java/com/jiuxian/client/fragment/B2CShopMainFragment.java b/jiuxian/src/main/java/com/jiuxian/client/fragment/B2CShopMainFragment.java
+index b8d160cd1..e91119bbd 100644
+--- a/jiuxian/src/main/java/com/jiuxian/client/fragment/B2CShopMainFragment.java
++++ b/jiuxian/src/main/java/com/jiuxian/client/fragment/B2CShopMainFragment.java
+@@ -31,6 +31,7 @@ import com.jiuxian.api.result.CartDataResult;
+ import com.jiuxian.api.result.CartNumber;
+ import com.jiuxian.api.result.EmptyResult;
+ import com.jiuxian.api.result.LoginInfoResult;
++import com.jiuxian.api.result.PermissionList;
+ import com.jiuxian.api.result.ProductId;
+ import com.jiuxian.api.result.RootResult;
+ import com.jiuxian.api.util.Callback;
+@@ -48,6 +49,8 @@ import com.jiuxian.client.comm.TDevice;
+ import com.jiuxian.client.comm.UserInfoManager;
+ import com.jiuxian.client.observer.bean.CartRefresh;
+ import com.jiuxian.client.observer.bean.LoginState;
++import com.jiuxian.client.permission.PermissionConstant;
++import com.jiuxian.client.permission.PermissionsCheckHelper;
+ import com.jiuxian.client.sharedprf.JZKUserDataHelper;
+ import com.jiuxian.client.ui.B2CShopMainShopActivity;
+ import com.jiuxian.client.ui.MainActivity;
+@@ -853,7 +856,9 @@ public class B2CShopMainFragment extends BaseLazyXFragment implements View.OnCli
+     @Override
+     public void refreshData() {
+         //没有缓存地址&& 没有开启定位权限就弹框申请
+-        if (JZKUserDataHelper.getJZKSelectedLocation() == null && mActivity instanceof MainActivity ){
++        //有缓存，就不显示弹出，没有缓存就显示弹框
++//         && !PermissionsCheckHelper.hasPermission(PermissionConstant.LOCATION_GROUP)
++        if (JZKUserDataHelper.getJZKSelectedLocation() == null){
+             MainActivity activity = (MainActivity) mActivity;
+             activity.initTongDun(new Runnable() {
+                 @Override
+@@ -861,6 +866,8 @@ public class B2CShopMainFragment extends BaseLazyXFragment implements View.OnCli
+                     requestShopId();
+                 }
+             });
++        }else{
++            requestShopId();
+         }
+     }
+ }
+diff --git a/jiuxian/src/main/java/com/jiuxian/client/ui/MainActivity.java b/jiuxian/src/main/java/com/jiuxian/client/ui/MainActivity.java
+index eb0b4d6bc..1a4ee98ce 100644
+--- a/jiuxian/src/main/java/com/jiuxian/client/ui/MainActivity.java
++++ b/jiuxian/src/main/java/com/jiuxian/client/ui/MainActivity.java
+@@ -1397,6 +1397,7 @@ public class MainActivity extends BaseActivity implements OnClickListener, ViewP
+                     ActivityCenter.gotoWebViewActivity(mActivity, UserDataHelper.getMainWinefastWebUrl());
+                     return;
+                 }
++                //有缓存，就不显示弹出，没有缓存就显示弹框
+                 if (JZKUserDataHelper.getJZKSelectedLocation() == null){
+                     initTongDun(new Runnable() {
+                         @Override
+
+

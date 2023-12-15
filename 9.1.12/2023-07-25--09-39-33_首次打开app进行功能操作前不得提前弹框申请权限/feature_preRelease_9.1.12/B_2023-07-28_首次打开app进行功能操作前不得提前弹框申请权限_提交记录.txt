@@ -1,0 +1,380 @@
+a1:
+commitTime: 2023/07/28-09:11:47    branchName: feature/feature_preRelease_9.1.12    Commit: 499e38ed3
+Message: update  首次打开app进行功能操作前不得提前弹框申请权限 流程待梳理
+Changed files:
+jiuxian/src/main/java/com/jiuxian/client/DebugMode.kt
+jiuxian/src/main/java/com/jiuxian/client/fragment/B2CShopMainFragment.java
+jiuxian/src/main/java/com/jiuxian/client/permission/PermissionsHelper.java
+jiuxian/src/main/java/com/jiuxian/client/ui/MainActivity.java
+Changed_codes:
+update  首次打开app进行功能操作前不得提前弹框申请权限 流程待梳理
+
+diff --git a/jiuxian/src/main/java/com/jiuxian/client/DebugMode.kt b/jiuxian/src/main/java/com/jiuxian/client/DebugMode.kt
+index 14a5fb894..36d399cf5 100644
+--- a/jiuxian/src/main/java/com/jiuxian/client/DebugMode.kt
++++ b/jiuxian/src/main/java/com/jiuxian/client/DebugMode.kt
+@@ -56,6 +56,8 @@ enum class DebugMode(val isDebug: Boolean = false, val tag: String?) {
+ 
+     SHOP_QUALIFICATION_INFO(false && AppEnv.DEBUG , "ShopQualificationInfo"),
+ 
++    PERMISSION_HELP(AppEnv.DEBUG , "permission_help"),
++
+     BUG_WELCOMEACTIVITY_SHOW_DEBUGIMG(false , "bug_welcomeactivity_show_debugimg");
+ 
+     //---------------------Method-----------------//
+diff --git a/jiuxian/src/main/java/com/jiuxian/client/fragment/B2CShopMainFragment.java b/jiuxian/src/main/java/com/jiuxian/client/fragment/B2CShopMainFragment.java
+index 1aa1e7b00..abf9ac322 100644
+--- a/jiuxian/src/main/java/com/jiuxian/client/fragment/B2CShopMainFragment.java
++++ b/jiuxian/src/main/java/com/jiuxian/client/fragment/B2CShopMainFragment.java
+@@ -50,6 +50,7 @@ import com.jiuxian.client.observer.bean.CartRefresh;
+ import com.jiuxian.client.observer.bean.LoginState;
+ import com.jiuxian.client.sharedprf.JZKUserDataHelper;
+ import com.jiuxian.client.ui.B2CShopMainShopActivity;
++import com.jiuxian.client.ui.MainActivity;
+ import com.jiuxian.client.util.ActivityCenter;
+ import com.jiuxian.client.util.ApiManager;
+ import com.jiuxian.client.util.B2CActivityCenter;
+@@ -789,6 +790,11 @@ public class B2CShopMainFragment extends BaseLazyXFragment implements View.OnCli
+ //        }
+         layout_empty.setVisibility(showEmpty ? View.VISIBLE : View.GONE);
+         ll_data.setVisibility(showEmpty ? View.GONE : View.VISIBLE);
++
++        if (mActivity instanceof MainActivity){
++            MainActivity activity = (MainActivity) mActivity;
++            activity.initTongDun(null);
++        }
+     }
+ 
+     private void setTipContent(String one, String two) {
+diff --git a/jiuxian/src/main/java/com/jiuxian/client/permission/PermissionsHelper.java b/jiuxian/src/main/java/com/jiuxian/client/permission/PermissionsHelper.java
+index e0741286b..b904f55bd 100644
+--- a/jiuxian/src/main/java/com/jiuxian/client/permission/PermissionsHelper.java
++++ b/jiuxian/src/main/java/com/jiuxian/client/permission/PermissionsHelper.java
+@@ -12,6 +12,7 @@ import androidx.fragment.app.Fragment;
+ import androidx.fragment.app.FragmentActivity;
+ 
+ import com.jiuxian.api.result.PermissionList;
++import com.jiuxian.client.DebugMode;
+ import com.jiuxian.client.comm.StringUtils;
+ import com.jiuxian.client.sharedprf.UserDataHelper2;
+ import com.jiuxian.client.util.Util;
+@@ -363,6 +364,7 @@ public class PermissionsHelper {
+ 
+         /**
+          * 提示dialog的取消回调
++         * 单击【知道了】按钮的回调
+          */
+         interface OnDialogSureCallback {
+             void onDialogSureCallback(PermissionsHelper permissionsHelper);
+@@ -421,6 +423,7 @@ public class PermissionsHelper {
+         if (mPermissionName != null && mPermissionName.length > 0) {
+             boolean allPermissonIsAllow = true;
+             if (mFilterCount>0){
++                //过滤掉申请权限次数 > mFilterCount 的权限
+                 String[] temPermissionName = filterPermission(mPermissionName,UserDataHelper2.getPermissionAll());
+                 if (temPermissionName != null && mPermissionName.length != temPermissionName.length){
+                     allPermissonIsAllow = false;
+@@ -430,9 +433,9 @@ public class PermissionsHelper {
+ 
+             ArrayList permissionList = new ArrayList();
+             for (int i = 0; i < mPermissionName.length; i++) {
+-                if (ContextCompat.checkSelfPermission(mActivity, mPermissionName[i])
+-                        != PackageManager.PERMISSION_GRANTED) {
++                if (ContextCompat.checkSelfPermission(mActivity, mPermissionName[i]) != PackageManager.PERMISSION_GRANTED) {
+                     allPermissonIsAllow = false;
++                    //过滤掉app已经获取到的权限
+                     permissionList.add(mPermissionName[i]);
+ 
+                 }else{
+@@ -493,7 +496,7 @@ public class PermissionsHelper {
+                                 return this; //当有onCancel 回调时，才return , 仅有 isGogoRequestPermission 没有 onCancel()，还是会继续申请
+                             }
+                         }else{//默认继续申请权限
+-
++                            DebugMode.PERMISSION_HELP.showLog("默认继续申请权限");
+                         }
+ 
+                     }
+diff --git a/jiuxian/src/main/java/com/jiuxian/client/ui/MainActivity.java b/jiuxian/src/main/java/com/jiuxian/client/ui/MainActivity.java
+index 53c61ec2b..e41b9f6ab 100644
+--- a/jiuxian/src/main/java/com/jiuxian/client/ui/MainActivity.java
++++ b/jiuxian/src/main/java/com/jiuxian/client/ui/MainActivity.java
+@@ -456,7 +456,7 @@ public class MainActivity extends BaseActivity implements OnClickListener, ViewP
+             public void onWindowFocusChanged(boolean hasFocus) {
+                 if (hasFocus) {
+                     mViewPager.getViewTreeObserver().removeOnWindowFocusChangeListener(this);
+-                    initTongDun();
++//                    initTongDun();
+                 }
+                 if (AppEnv.DEBUG) {
+                     Log.e("uis", "onWindowFocusChanged  hasFocus : " + hasFocus);
+@@ -555,7 +555,7 @@ public class MainActivity extends BaseActivity implements OnClickListener, ViewP
+ //        });
+     }
+ 
+-    private void initTongDun() {
++    public void initTongDun(Runnable callback) {
+         //TongdunHelper.requestTongDunPermissions(MainActivity.this, null);
+ 
+         new PermissionsHelper.builder(MainActivity.this, PermissionConstant.LOCATION_GROUP)
+@@ -601,6 +601,11 @@ public class MainActivity extends BaseActivity implements OnClickListener, ViewP
+                                     } else {
+                                         getCacheAddressInfo();
+                                     }
++
++                                    if (callback != null){
++                                        callback.run();
++                                    }
++
+                                 }
+                             });
+ 
+@@ -613,8 +618,8 @@ public class MainActivity extends BaseActivity implements OnClickListener, ViewP
+                         getCacheAddressInfo();
+                     }
+                 })
+-                .setFilterCount(1)
+-                .setRestartAppIgnorePermission(true)
++//                .setFilterCount(1)
++//                .setRestartAppIgnorePermission(true)
+                 .setPermission(new PermissionsHelper.PermissionCallback.OnCancelCallback() {
+                     @Override
+                     public boolean onCancel() {
+@@ -1391,6 +1396,13 @@ public class MainActivity extends BaseActivity implements OnClickListener, ViewP
+                     ActivityCenter.gotoWebViewActivity(mActivity, UserDataHelper.getMainWinefastWebUrl());
+                     return;
+                 }
++                initTongDun(new Runnable() {
++                    @Override
++                    public void run() {
++                        changeTab(TabType.O2OSHOP);
++                        JiuJiuClickUtil.click(getString(R.string.jiujiu_home), getString(R.string.jiujiu_click_classify));
++                    }
++                });
+ //                if (mPosition == 0) {//当前在首页
+ //                    if (mCurrentFragment instanceof MainFragmentTab) {
+ //                        MainFragmentTab mainFragmentTab = ((MainFragmentTab) mCurrentFragment);
+@@ -1404,9 +1416,9 @@ public class MainActivity extends BaseActivity implements OnClickListener, ViewP
+ //                        }
+ //                    }
+ //                } else {
+-                changeTab(TabType.O2OSHOP);
++//                changeTab(TabType.O2OSHOP);
+ //                }
+-                JiuJiuClickUtil.click(getString(R.string.jiujiu_home), getString(R.string.jiujiu_click_classify));
++//                JiuJiuClickUtil.click(getString(R.string.jiujiu_home), getString(R.string.jiujiu_click_classify));
+                 break;
+             case R.id.tab_community_publish:
+ //                mTabCommunityPublish.setVisibility(View.INVISIBLE);
+
+
+a2:
+commitTime: 2023/07/28-10:07:25    branchName: feature/feature_preRelease_9.1.12    Commit: 749ab4892
+Message: 我的页面增加拼团和招聘关注的主播和金币由服务端控制
+Changed files:
+buildConfig/app.properties
+jiuxian/src/main/java/com/jiuxian/api/result/UserCenterModuleData.java
+jiuxian/src/main/java/com/jiuxian/client/adapter/ClubHeadAdapter.java
+Changed_codes:
+我的页面增加拼团和招聘关注的主播和金币由服务端控制
+
+diff --git a/buildConfig/app.properties b/buildConfig/app.properties
+index 8b6a9f367..b666e5ee6 100644
+--- a/buildConfig/app.properties
++++ b/buildConfig/app.properties
+@@ -1,7 +1,7 @@
+ #versionName
+-app.version.name=9.1.11
++app.version.name=9.1.12
+ #versionCode
+-app.version.code=22100
++app.version.code=22200
+ 
+ app.version.dev=false
+ app.channel=jiuxianwebsite
+diff --git a/jiuxian/src/main/java/com/jiuxian/api/result/UserCenterModuleData.java b/jiuxian/src/main/java/com/jiuxian/api/result/UserCenterModuleData.java
+index e994a4cc9..d496ccac6 100644
+--- a/jiuxian/src/main/java/com/jiuxian/api/result/UserCenterModuleData.java
++++ b/jiuxian/src/main/java/com/jiuxian/api/result/UserCenterModuleData.java
+@@ -96,10 +96,14 @@ public class UserCenterModuleData {
+         public static final String KEY_MY_GOODEXCHANGE = "My_goodExchange";//去兑换
+         public static final String KEY_PRODUCT_COLLECT = "Product_collect";//商品收藏
+         public static final String KEY_BROWSE_FOOTPRINT = "Browse_footprint";//浏览足迹
+-        public static final String KEY_ATTENTION_ANCHOR = "attention_anchor";//关注的主播
+-        public static final String KEY_WINE_BI = "wine_bi";//酒币
++        public static final String KEY_ATTENTION_ANCHOR = "ZHU_BO";//关注的主播
++        public static final String KEY_WINE_BI = "JIN_BI";//酒币
+         public static final String KEY_RESERVATION = "RESERVATION_KEY";//我的预约
+ 
++//        改一下值，复用之前的
++//        public static final String KEY_JIN_BI = "JIN_BI";//酒币
++//        public static final String KEY_ZHU_BO = "ZHU_BO";// 关注主播
++
+         @JSONField(name = "group")
+         public int mGroupId;
+         @JSONField(name = "key")
+diff --git a/jiuxian/src/main/java/com/jiuxian/client/adapter/ClubHeadAdapter.java b/jiuxian/src/main/java/com/jiuxian/client/adapter/ClubHeadAdapter.java
+index 7f9d22556..38f6efb5f 100644
+--- a/jiuxian/src/main/java/com/jiuxian/client/adapter/ClubHeadAdapter.java
++++ b/jiuxian/src/main/java/com/jiuxian/client/adapter/ClubHeadAdapter.java
+@@ -700,19 +700,19 @@ public class ClubHeadAdapter extends BaseAdapter implements PinnedSectionHomeLis
+         moduleData4.mName = StringUtils.getString(R.string.browse_history);
+         mModuleDataList.add(moduleData4);
+ 
+-        //关注的主播
+-        UserCenterModuleData.ModuleData moduleData5 = new UserCenterModuleData.ModuleData();
+-        moduleData5.mType = UserCenterModuleData.ModuleData.TYPE_NATIVE;
+-        moduleData5.mKey = UserCenterModuleData.ModuleData.KEY_ATTENTION_ANCHOR;
+-        moduleData5.mName = StringUtils.getString(R.string.usercenter_attention_anchor);
+-        mModuleDataList.add(moduleData5);
+-
+-        //酒币
+-        UserCenterModuleData.ModuleData moduleData6 = new UserCenterModuleData.ModuleData();
+-        moduleData6.mType = UserCenterModuleData.ModuleData.TYPE_NATIVE;
+-        moduleData6.mKey = UserCenterModuleData.ModuleData.KEY_WINE_BI;
+-        moduleData6.mName = StringUtils.getString(R.string.usercenter_wine_bi);
+-        mModuleDataList.add(moduleData6);
++//        //关注的主播
++//        UserCenterModuleData.ModuleData moduleData5 = new UserCenterModuleData.ModuleData();
++//        moduleData5.mType = UserCenterModuleData.ModuleData.TYPE_NATIVE;
++//        moduleData5.mKey = UserCenterModuleData.ModuleData.KEY_ATTENTION_ANCHOR;
++//        moduleData5.mName = StringUtils.getString(R.string.usercenter_attention_anchor);
++//        mModuleDataList.add(moduleData5);
++//
++//        //酒币
++//        UserCenterModuleData.ModuleData moduleData6 = new UserCenterModuleData.ModuleData();
++//        moduleData6.mType = UserCenterModuleData.ModuleData.TYPE_NATIVE;
++//        moduleData6.mKey = UserCenterModuleData.ModuleData.KEY_WINE_BI;
++//        moduleData6.mName = StringUtils.getString(R.string.usercenter_wine_bi);
++//        mModuleDataList.add(moduleData6);
+ 
+         if (mModuleData != null) {
+             mModuleDataList.addAll(mModuleData);
+
+
+a3:
+commitTime: 2023/07/28-10:25:31    branchName: feature/feature_preRelease_9.1.12    Commit: fb7f2e7bf
+Message: APP应用图标更换
+Changed files:
+jiuxian/src/main/ic_launcher-playstore.png
+jiuxian/src/main/res/mipmap-hdpi/ic_launcher.png
+jiuxian/src/main/res/mipmap-hdpi/ic_launcher_background.png
+jiuxian/src/main/res/mipmap-hdpi/ic_launcher_foreground.png
+jiuxian/src/main/res/mipmap-hdpi/ic_launcher_round.png
+jiuxian/src/main/res/mipmap-mdpi/ic_launcher.png
+jiuxian/src/main/res/mipmap-mdpi/ic_launcher_background.png
+jiuxian/src/main/res/mipmap-mdpi/ic_launcher_foreground.png
+jiuxian/src/main/res/mipmap-mdpi/ic_launcher_round.png
+jiuxian/src/main/res/mipmap-xhdpi/ic_launcher.png
+jiuxian/src/main/res/mipmap-xhdpi/ic_launcher_background.png
+jiuxian/src/main/res/mipmap-xhdpi/ic_launcher_foreground.png
+jiuxian/src/main/res/mipmap-xhdpi/ic_launcher_round.png
+jiuxian/src/main/res/mipmap-xxhdpi/ic_launcher.png
+jiuxian/src/main/res/mipmap-xxhdpi/ic_launcher_background.png
+jiuxian/src/main/res/mipmap-xxhdpi/ic_launcher_foreground.png
+jiuxian/src/main/res/mipmap-xxhdpi/ic_launcher_round.png
+jiuxian/src/main/res/mipmap-xxxhdpi/ic_launcher.png
+jiuxian/src/main/res/mipmap-xxxhdpi/ic_launcher_background.png
+jiuxian/src/main/res/mipmap-xxxhdpi/ic_launcher_foreground.png
+jiuxian/src/main/res/mipmap-xxxhdpi/ic_launcher_round.png
+Changed_codes:
+APP应用图标更换
+
+diff --git a/jiuxian/src/main/ic_launcher-playstore.png b/jiuxian/src/main/ic_launcher-playstore.png
+index f9d8e2b3d..394d22752 100644
+Binary files a/jiuxian/src/main/ic_launcher-playstore.png and b/jiuxian/src/main/ic_launcher-playstore.png differ
+diff --git a/jiuxian/src/main/res/mipmap-hdpi/ic_launcher.png b/jiuxian/src/main/res/mipmap-hdpi/ic_launcher.png
+index 12e274a22..0eec777b5 100644
+Binary files a/jiuxian/src/main/res/mipmap-hdpi/ic_launcher.png and b/jiuxian/src/main/res/mipmap-hdpi/ic_launcher.png differ
+diff --git a/jiuxian/src/main/res/mipmap-hdpi/ic_launcher_background.png b/jiuxian/src/main/res/mipmap-hdpi/ic_launcher_background.png
+index 612545644..2bcb931ea 100644
+Binary files a/jiuxian/src/main/res/mipmap-hdpi/ic_launcher_background.png and b/jiuxian/src/main/res/mipmap-hdpi/ic_launcher_background.png differ
+diff --git a/jiuxian/src/main/res/mipmap-hdpi/ic_launcher_foreground.png b/jiuxian/src/main/res/mipmap-hdpi/ic_launcher_foreground.png
+index 2c00f9937..df697b1b8 100644
+Binary files a/jiuxian/src/main/res/mipmap-hdpi/ic_launcher_foreground.png and b/jiuxian/src/main/res/mipmap-hdpi/ic_launcher_foreground.png differ
+diff --git a/jiuxian/src/main/res/mipmap-hdpi/ic_launcher_round.png b/jiuxian/src/main/res/mipmap-hdpi/ic_launcher_round.png
+index 085864c0a..1a2fc803f 100644
+Binary files a/jiuxian/src/main/res/mipmap-hdpi/ic_launcher_round.png and b/jiuxian/src/main/res/mipmap-hdpi/ic_launcher_round.png differ
+diff --git a/jiuxian/src/main/res/mipmap-mdpi/ic_launcher.png b/jiuxian/src/main/res/mipmap-mdpi/ic_launcher.png
+index 7479a143d..7f7f297c1 100644
+Binary files a/jiuxian/src/main/res/mipmap-mdpi/ic_launcher.png and b/jiuxian/src/main/res/mipmap-mdpi/ic_launcher.png differ
+diff --git a/jiuxian/src/main/res/mipmap-mdpi/ic_launcher_background.png b/jiuxian/src/main/res/mipmap-mdpi/ic_launcher_background.png
+index 884117676..cb46fd065 100644
+Binary files a/jiuxian/src/main/res/mipmap-mdpi/ic_launcher_background.png and b/jiuxian/src/main/res/mipmap-mdpi/ic_launcher_background.png differ
+diff --git a/jiuxian/src/main/res/mipmap-mdpi/ic_launcher_foreground.png b/jiuxian/src/main/res/mipmap-mdpi/ic_launcher_foreground.png
+index 9e607b1a5..4918ec930 100644
+Binary files a/jiuxian/src/main/res/mipmap-mdpi/ic_launcher_foreground.png and b/jiuxian/src/main/res/mipmap-mdpi/ic_launcher_foreground.png differ
+diff --git a/jiuxian/src/main/res/mipmap-mdpi/ic_launcher_round.png b/jiuxian/src/main/res/mipmap-mdpi/ic_launcher_round.png
+index 66a24d1ea..fab3fc378 100644
+Binary files a/jiuxian/src/main/res/mipmap-mdpi/ic_launcher_round.png and b/jiuxian/src/main/res/mipmap-mdpi/ic_launcher_round.png differ
+diff --git a/jiuxian/src/main/res/mipmap-xhdpi/ic_launcher.png b/jiuxian/src/main/res/mipmap-xhdpi/ic_launcher.png
+index b905f4382..3534ef908 100644
+Binary files a/jiuxian/src/main/res/mipmap-xhdpi/ic_launcher.png and b/jiuxian/src/main/res/mipmap-xhdpi/ic_launcher.png differ
+diff --git a/jiuxian/src/main/res/mipmap-xhdpi/ic_launcher_background.png b/jiuxian/src/main/res/mipmap-xhdpi/ic_launcher_background.png
+index 423cb1469..3709074b1 100644
+Binary files a/jiuxian/src/main/res/mipmap-xhdpi/ic_launcher_background.png and b/jiuxian/src/main/res/mipmap-xhdpi/ic_launcher_background.png differ
+diff --git a/jiuxian/src/main/res/mipmap-xhdpi/ic_launcher_foreground.png b/jiuxian/src/main/res/mipmap-xhdpi/ic_launcher_foreground.png
+index 6b2b79f3d..087ec2de5 100644
+Binary files a/jiuxian/src/main/res/mipmap-xhdpi/ic_launcher_foreground.png and b/jiuxian/src/main/res/mipmap-xhdpi/ic_launcher_foreground.png differ
+diff --git a/jiuxian/src/main/res/mipmap-xhdpi/ic_launcher_round.png b/jiuxian/src/main/res/mipmap-xhdpi/ic_launcher_round.png
+index 5efcce323..08a9332e6 100644
+Binary files a/jiuxian/src/main/res/mipmap-xhdpi/ic_launcher_round.png and b/jiuxian/src/main/res/mipmap-xhdpi/ic_launcher_round.png differ
+diff --git a/jiuxian/src/main/res/mipmap-xxhdpi/ic_launcher.png b/jiuxian/src/main/res/mipmap-xxhdpi/ic_launcher.png
+index 6f41942bb..f1356c575 100644
+Binary files a/jiuxian/src/main/res/mipmap-xxhdpi/ic_launcher.png and b/jiuxian/src/main/res/mipmap-xxhdpi/ic_launcher.png differ
+diff --git a/jiuxian/src/main/res/mipmap-xxhdpi/ic_launcher_background.png b/jiuxian/src/main/res/mipmap-xxhdpi/ic_launcher_background.png
+index 6793ea849..3064e06fd 100644
+Binary files a/jiuxian/src/main/res/mipmap-xxhdpi/ic_launcher_background.png and b/jiuxian/src/main/res/mipmap-xxhdpi/ic_launcher_background.png differ
+diff --git a/jiuxian/src/main/res/mipmap-xxhdpi/ic_launcher_foreground.png b/jiuxian/src/main/res/mipmap-xxhdpi/ic_launcher_foreground.png
+index 5bbbfde4e..72ef50443 100644
+Binary files a/jiuxian/src/main/res/mipmap-xxhdpi/ic_launcher_foreground.png and b/jiuxian/src/main/res/mipmap-xxhdpi/ic_launcher_foreground.png differ
+diff --git a/jiuxian/src/main/res/mipmap-xxhdpi/ic_launcher_round.png b/jiuxian/src/main/res/mipmap-xxhdpi/ic_launcher_round.png
+index 149c3bd4a..e3cad9b0e 100644
+Binary files a/jiuxian/src/main/res/mipmap-xxhdpi/ic_launcher_round.png and b/jiuxian/src/main/res/mipmap-xxhdpi/ic_launcher_round.png differ
+diff --git a/jiuxian/src/main/res/mipmap-xxxhdpi/ic_launcher.png b/jiuxian/src/main/res/mipmap-xxxhdpi/ic_launcher.png
+index 39829ebd9..e9986ec22 100644
+Binary files a/jiuxian/src/main/res/mipmap-xxxhdpi/ic_launcher.png and b/jiuxian/src/main/res/mipmap-xxxhdpi/ic_launcher.png differ
+diff --git a/jiuxian/src/main/res/mipmap-xxxhdpi/ic_launcher_background.png b/jiuxian/src/main/res/mipmap-xxxhdpi/ic_launcher_background.png
+index 2916224d0..c63bdd36a 100644
+Binary files a/jiuxian/src/main/res/mipmap-xxxhdpi/ic_launcher_background.png and b/jiuxian/src/main/res/mipmap-xxxhdpi/ic_launcher_background.png differ
+diff --git a/jiuxian/src/main/res/mipmap-xxxhdpi/ic_launcher_foreground.png b/jiuxian/src/main/res/mipmap-xxxhdpi/ic_launcher_foreground.png
+index 93bc27349..341371483 100644
+Binary files a/jiuxian/src/main/res/mipmap-xxxhdpi/ic_launcher_foreground.png and b/jiuxian/src/main/res/mipmap-xxxhdpi/ic_launcher_foreground.png differ
+diff --git a/jiuxian/src/main/res/mipmap-xxxhdpi/ic_launcher_round.png b/jiuxian/src/main/res/mipmap-xxxhdpi/ic_launcher_round.png
+index f8e3a356b..24bb4a8c7 100644
+Binary files a/jiuxian/src/main/res/mipmap-xxxhdpi/ic_launcher_round.png and b/jiuxian/src/main/res/mipmap-xxxhdpi/ic_launcher_round.png differ
+
+
+a4:
+commitTime: 2023/07/28-15:32:28    branchName: feature/feature_preRelease_9.1.12    Commit: f47945aac
+Message: 要根据sort 排序，客户端进行了排序，把排序规则去掉，有服务端顺序返回
+Changed files:
+jiuxian/src/main/java/com/jiuxian/api/result/UserCenterModuleData.java
+Changed_codes:
+要根据sort 排序，客户端进行了排序，把排序规则去掉，有服务端顺序返回
+
+diff --git a/jiuxian/src/main/java/com/jiuxian/api/result/UserCenterModuleData.java b/jiuxian/src/main/java/com/jiuxian/api/result/UserCenterModuleData.java
+index d496ccac6..3e769fcb1 100644
+--- a/jiuxian/src/main/java/com/jiuxian/api/result/UserCenterModuleData.java
++++ b/jiuxian/src/main/java/com/jiuxian/api/result/UserCenterModuleData.java
+@@ -37,12 +37,12 @@ public class UserCenterModuleData {
+ //                mListData.add(data1);
+ //                mListData.add(data2);
+             }
+-            Collections.sort(mListData, new Comparator<ModuleData>() {
+-                @Override
+-                public int compare(ModuleData lhs, ModuleData rhs) {
+-                    return lhs.mGroupId - rhs.mGroupId;
+-                }
+-            });
++//            Collections.sort(mListData, new Comparator<ModuleData>() {
++//                @Override
++//                public int compare(ModuleData lhs, ModuleData rhs) {
++//                    return lhs.mGroupId - rhs.mGroupId;
++//                }
++//            });
+         }
+     }
+ 
+
+

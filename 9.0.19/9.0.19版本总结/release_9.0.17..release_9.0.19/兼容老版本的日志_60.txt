@@ -1,0 +1,60 @@
+Merge branch 'release/release_9.0.19'  fuyuguang  2022-05-18 14:35:13  fcd8854e2
+Merge branch 'feature/feature_preRelease_9.0.16' into develop  fuyuguang  2022-05-18 14:33:06  97dff8b5a
+update channels  fuyuguang  2022-05-18 14:31:35  cd85738d9
+update version  fuyuguang  2022-05-18 10:56:14  015831075
+update channel  fuyuguang  2022-05-18 10:54:09  acaeece39
+update  fuyuguang  2022-05-18 10:11:05  032b8a174
+全量包  fuyuguang  2022-05-17 15:38:43  8d1fe1bb2
+update  fuyuguang  2022-05-16 18:28:20  8cb2dce8d
+update logoActivity icon  fuyuguang  2022-05-16 18:26:56  14af42497
+update  fuyuguang  2022-05-16 18:10:35  c4fe9cd86
+update  fuyuguang  2022-05-16 16:26:09  7fdaf1de5
+Merge branch 'feature/feature_preRelease_9.0.16' of ssh://gitlab.9ijx.com:9830/android/jiuxian_studio into feature/feature_preRelease_9.0.16  fuyuguang  2022-05-16 16:10:28  5822c88db
+update             targetSdkVersion   : 28,  fuyuguang  2022-05-16 16:10:23  3dce3f82b
+update gson version  fuyuguang  2022-05-16 14:25:26  c8cb9f917
+update  fuyuguang  2022-05-16 11:54:13  a167d1ca6
+update  搜索栏边距  fuyuguang  2022-05-16 11:17:05  2922d7e7d
+Merge branch 'feature/feature_preRelease_9.0.16' of ssh://gitlab.9ijx.com:9830/android/jiuxian_studio into feature/feature_preRelease_9.0.16  fuyuguang  2022-05-14 19:31:09  4184a6c96
+update 首页bug  fuyuguang  2022-05-14 19:30:21  ad594993d
+update  fuyuguang  2022-05-13 19:22:11  cf5300524
+update  修复首页 替换tab 数据 bug  fuyuguang  2022-05-13 19:18:21  fd79db5d1
+Merge branch 'feature/feature_preRelease_9.0.16' of ssh://gitlab.9ijx.com:9830/android/jiuxian_studio into feature/feature_preRelease_9.0.16  fuyuguang  2022-05-13 09:48:07  e83a073fc
+update icon  fuyuguang  2022-05-13 09:48:02  59287b561
+update icon  fuyuguang  2022-05-13 09:47:50  34b670532
+update  fuyuguang  2022-05-11 11:12:55  bbc22932f
+update  fuyuguang  2022-05-11 09:37:31  31a60de3d
+Merge branch 'feature/feature_preRelease_9.0.16' of ssh://gitlab.9ijx.com:9830/android/jiuxian_studio into feature/feature_preRelease_9.0.16  fuyuguang  2022-05-10 18:57:14  23d239178
+update icon  fuyuguang  2022-05-10 18:57:10  443c06299
+update icon  fuyuguang  2022-05-09 16:32:04  69f951527
+update 混淆  fuyuguang  2022-05-06 18:47:21  864e343d8
+update  fuyuguang  2022-05-05 18:16:25  5469fc733
+update 改版本号  fuyuguang  2022-05-05 11:41:50  492543d39
+Merge branch 'feature/feature_preRelease_9.0.16' into develop  fuyuguang  2022-05-05 11:30:58  0226d2c72
+Merge tag 'release_9.0.17' into develop  fuyuguang  2022-04-29 21:30:33  592b36ae6
+Merge branch 'feature/feature_preRelease_9.0.16' of ssh://gitlab.9ijx.com:9830/android/jiuxian_studio into feature/feature_preRelease_9.0.16  fuyuguang  2022-04-25 19:35:38  0d806e27b
+update  fuyuguang  2022-04-25 19:35:33  70d04e609
+Merge branch 'feature/feature_preRelease_9.0.16' of ssh://gitlab.9ijx.com:9830/android/jiuxian_studio into feature/feature_preRelease_9.0.16  fuyuguang  2022-04-25 09:16:57  fdbb35ace
+update  fuyuguang  2022-04-25 09:16:53  cb19ad2e8
+Merge branch 'feature/feature/feature_fyg_9.0.16' of ssh://gitlab.9ijx.com:9830/android/jiuxian_studio into feature/feature_preRelease_9.0.16  fuyuguang  2022-04-24 19:34:09  c97364943
+update  fuyuguang  2022-04-24 19:25:08  cf5b4bedf
+update  fuyuguang  2022-04-24 18:01:48  c2b18604a
+update  fuyuguang  2022-04-21 18:33:24  bfa317658
+update  fuyuguang  2022-04-19 15:32:14  92eb77227
+update retrofit flow  fuyuguang  2022-04-19 09:09:23  768658808
+update  fuyuguang  2022-04-11 09:53:59  49c4b0e61
+Merge branch 'feature/feature_fyg_9.0.14' of ssh://gitlab.9ijx.com:9830/android/jiuxian_studio into feature/feature/feature_fyg_9.0.16  fuyuguang  2022-04-08 19:13:44  42df576fa
+Merge branch 'develop' of ssh://gitlab.9ijx.com:9830/android/jiuxian_studio into feature/feature_fyg_9.0.15_retrofit  fuyuguang  2022-04-08 15:42:29  a85203b3e
+Merge branch 'develop' of ssh://gitlab.9ijx.com:9830/android/jiuxian_studio into feature/feature_fyg_9.0.14  fuyuguang  2022-04-08 15:41:43  9dc2c6c29
+update                     /** 门店自提, 只要在门店营业时间段里都可以来取，不考虑用户到门店的收货时间， 假设现在是 22.58，门店23：00 关门，那么也让用户提交订单，至于用户23后来门店后发现关门的情况，不需要开发考虑  */  fuyuguang  2022-04-07 17:59:02  b20d0ff27
+update  fuyuguang  2022-04-07 15:46:30  f3b3c05b5
+update  优化retrofit  fuyuguang  2022-04-07 15:42:07  5f00e3a46
+update retrofit  fuyuguang  2022-04-06 19:34:57  1a7008e9a
+update retrofit  fuyuguang  2022-04-02 18:06:11  af210ee26
+Merge branch 'develop' of ssh://gitlab.9ijx.com:9830/android/jiuxian_studio into feature/feature_fyg_9.0.14  fuyuguang  2022-03-31 17:00:37  4fb77b27e
+update  fuyuguang  2022-03-18 09:42:32  9d6100558
+update  fuyuguang  2022-03-14 11:32:27  614cd1a2f
+update   ： 1. 1347923 java.lang.IllegalStateException Only fullscreen opaque activities can request orientation com.jiuxian.client.ui.AddressDialogActivity.onCreate(SourceFile:1)   AddressDialogActivity省市区选择页  fuyuguang  2022-03-08 19:07:03  5c505d786
+update  fuyuguang  2022-03-07 11:37:14  fb698661a
+update  fuyuguang  2022-03-01 14:25:34  bddd355a1
+update  fuyuguang  2022-02-25 20:21:04  965a91252
+update  fuyuguang  2022-02-24 09:45:57  7337b616b

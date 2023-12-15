@@ -1,0 +1,38 @@
+Merge branch 'release/release_9.1.17'  fuyuguang  2023-10-26 19:00:31  5e525c749
+Merge branch 'feature/feature_preRelease_9.1.17' into develop  fuyuguang  2023-10-26 18:53:10  e4bbd1e6d
+feat: 腾讯乐固续费升级  fuyuguang  2023-10-23 15:58:01  957713f71
+fix (商品详情页查看评价列表): 商品详情_查看某商品的评价列表_推荐和最新tab跟随页面滑动而非固定  fuyuguang  2023-10-23 10:10:25  8e2f51c23
+style: 限时抢购的图标和背景图尺寸帮    我看看你们写的是多高呗,要不改成260*20？ 你那边方便改吗  fuyuguang  2023-10-18 14:50:19  c6a1e1104
+style: 买赠字号小1号，然后居中一点，商品名称颜色是#333333  fuyuguang  2023-10-18 14:26:49  46f66137a
+fix: fix_9.1.14_没有安装支付宝禁止使用支付宝网页支付  fuyuguang  2023-10-18 10:57:49  ee906452b
+fix(B2CShopChartAnimManager): 连续单击加购按钮更新适配器时view位置获取有误问题  fuyuguang  2023-10-17 19:00:35  208b64dd2
+style: 立即送底部推荐商品商品名称14号加粗，价格文字是32加粗  fuyuguang  2023-10-17 18:51:38  1d9701a9a
+style(dialog_quantity_storage.xml): 数量和储存温度，这几个字大2号呗，再加粗  fuyuguang  2023-10-17 18:43:17  53e33e908
+feat: 立即送推荐商品添加（购物车中该商品）数量角标  fuyuguang  2023-10-17 18:30:35  bd7d5a025
+fix: 小购物车进提交订单完善收货地址信息字样可单击  fuyuguang  2023-10-17 15:06:39  f1f2d6cb0
+fix: 修复活动页跳转后报错或打不开问题  fuyuguang  2023-10-16 17:08:56  c8150f909
+style: tablayout 下划线左右对齐  fuyuguang  2023-10-16 15:05:09  51251cb1a
+style(layout/fragment_shop_empty.xml): 返回首页与切换地址_间距30dp  fuyuguang  2023-10-16 15:04:08  a692f5904
+style(item_promotion.xml): 箭头改到粉色背景里面  fuyuguang  2023-10-16 15:01:30  58584d5cd
+style(item_gift.xml): 赠品布局改为方角而非圆角  fuyuguang  2023-10-16 14:59:40  50b5a210e
+style: 完善收货人信息，由于UI要求 布局箭头和之前一样居中对齐，所以外层新增RelativeLayout&收货地址行高默认改为1行，最大2行  fuyuguang  2023-10-16 14:56:07  f070cbea2
+fix(OrderCommit2Activity | OrderCommitActivity): 提交订单去完善地址有两套逻辑，统一成一种&提交订单进地址页不需要带收货人姓名  fuyuguang  2023-10-12 16:01:53  1f5e9c4a6
+fix(JZKProductFragment:serDiscountData()): 商品详情页无促销活动商品切换到促销商品展示买赠促销信息_再切换到原商品应不显示买赠促销信息  fuyuguang  2023-10-12 10:45:17  3d90833f8
+style(item_mainshop_limit_recycleview.xml): 修改 B2CShopMainFragment 限时抢购item 更多活动颜色  fuyuguang  2023-10-11 17:49:34  0b31ae476
+feat(提交订单页popwindow浮窗): 提交订单页_去完善浮窗提示_改为嵌到Item中实现  fuyuguang  2023-10-11 16:26:03  2a0dc3ba3
+build: config version v9.1.17  fuyuguang  2023-10-11 16:02:27  8e169d9a0
+style: app双11图标更换  fuyuguang  2023-10-10 18:25:38  252a92db5
+style(活动促销item): 样式修改  fuyuguang  2023-10-10 18:18:34  2b05a6f54
+fix(预售商品弹窗): 确认按钮文字改成支付定金&弹窗中修改数量后要带到详情页和提交订单页  fuyuguang  2023-10-10 17:08:15  207993843
+style: 调整TabLayout各item间距及缩放模式  fuyuguang  2023-10-10 15:12:58  b0ab733b3
+fix(DialogLoading): 通过参数指定dialog是否允许用户按返回键关闭除提交订单页面默认都允许用户关闭  fuyuguang  2023-10-10 14:50:36  c9efc816e
+fix(RecommendFragment): 代码健壮性判断  fuyuguang  2023-10-10 12:06:14  4bbc09271
+style(B2CShopMainFragment): 搜索框样式修改  fuyuguang  2023-10-10 12:04:10  7f1818a74
+style(后台新增两套不同尺寸广告位，广告位分优先级，优先显示小尺寸banner): 核实UI尺寸  fuyuguang  2023-10-10 11:31:56  97c2a9e0b
+fix: 促销标签显示条件判断有误不应使用buyLargess 买赠字段，copy代码忘记改字段  fuyuguang  2023-10-10 11:19:40  7f71ce4f6
+style: 促销标签背景改为#FFF8FA  fuyuguang  2023-10-10 11:16:41  7bc79ecdb
+feat: 当没有返回titles标签时(List<TabTitle>)不显示TabLayout,但推荐商品要显示  fuyuguang  2023-10-10 10:49:34  a51b0fb13
+feat: 商品详情页预售优化修改为同单击商品详情页立即购买按钮弹商品数量框，复用该框  fuyuguang  2023-10-09 17:45:55  38567cf42
+fix: 添加混淆配置，修复RecyclerView反射属性mOverScroller报错  fuyuguang  2023-10-09 17:08:35  4cfbf01bf
+feat: 立即送首页改 &立即送提交订单地址优化  fuyuguang  2023-10-09 15:07:28  2ef266815
+Merge tag 'release_9.1.16' into develop  fuyuguang  2023-09-27 18:42:42  4bc7d781f

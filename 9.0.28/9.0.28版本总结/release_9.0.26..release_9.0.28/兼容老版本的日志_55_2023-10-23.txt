@@ -1,0 +1,55 @@
+Merge branch 'release/release_9.0.28'  fuyuguang  2022-11-01 10:17:57  1b451ca51
+Merge branch 'feature/feature_preRelease_9.0.28' into develop  fuyuguang  2022-11-01 10:16:25  b96920367
+update  fuyuguang  2022-10-31 11:54:51  8652a4c46
+Merge branch 'feature/feature_preRelease_9.0.28' of ssh://gitlab.9ijx.com:9830/android/jiuxian_studio into feature/feature_preRelease_9.0.28  fuyuguang  2022-10-29 12:00:03  3509ba0a7
+update  fuyuguang  2022-10-29 11:59:55  d1788e009
+update  fuyuguang  2022-10-28 10:22:12  2ffe26cf8
+update  fuyuguang  2022-10-28 09:57:33  d27996d62
+update  fuyuguang  2022-10-21 18:36:43  bcdcf8d38
+update  fuyuguang  2022-10-20 15:41:31  b741f6f95
+update  fuyuguang  2022-10-19 11:16:31  0e1572bf5
+update  fuyuguang  2022-10-19 11:14:34  a5d5e7884
+update  fuyuguang  2022-10-18 11:08:27  056b8d5dd
+update  fuyuguang  2022-10-18 10:41:25  eac4401fe
+Merge branch 'feature/feature_fyg_9.0.28_optimization_net' of ssh://gitlab.9ijx.com:9830/android/jiuxian_studio into feature/feature_preRelease_9.0.28  fuyuguang  2022-10-13 18:59:32  b0d64b131
+update  fuyuguang  2022-10-13 18:58:22  da32e7004
+update  fuyuguang  2022-10-13 17:22:17  e7aba0845
+update  fuyuguang  2022-10-11 17:59:25  0197df3dc
+update  fuyuguang  2022-10-11 17:32:46  022c32d80
+Merge branch 'feature/feature_fyg_9.0.28_optimization_net' of ssh://gitlab.9ijx.com:9830/android/jiuxian_studio into feature/feature_preRelease_9.0.28  fuyuguang  2022-10-11 15:56:55  2fa0762da
+update  fuyuguang  2022-10-11 15:53:11  b4a2a0176
+update  fuyuguang  2022-10-11 15:28:51  dcc47da34
+update  fuyuguang  2022-10-11 10:51:59  3c1458df3
+update  fuyuguang  2022-10-10 19:29:22  6e7e20144
+update  fuyuguang  2022-10-10 16:15:38  9bd00de4f
+update  fuyuguang  2022-10-10 14:38:18  654b477a8
+Merge branch 'feature/feature_preRelease_9.0.28' of ssh://gitlab.9ijx.com:9830/android/jiuxian_studio into feature/feature_preRelease_9.0.28  fuyuguang  2022-10-09 19:07:13  ad63fab21
+update  fuyuguang  2022-10-09 19:07:08  29252c805
+Merge branch 'feature/feature_preRelease_9.0.28' of ssh://gitlab.9ijx.com:9830/android/jiuxian_studio into feature/feature_preRelease_9.0.28  fuyuguang  2022-10-08 19:38:22  8d113b7cb
+update  fuyuguang  2022-10-08 19:38:18  ff40b89f4
+update 更新 新的 License文件  fuyuguang  2022-10-08 19:34:50  80f6c22b4
+update  fuyuguang  2022-10-08 18:36:31  b1a9a33a8
+Merge branch 'feature/feature_preRelease_9.0.28' of ssh://gitlab.9ijx.com:9830/android/jiuxian_studio into feature/feature_preRelease_9.0.28  fuyuguang  2022-10-08 17:34:25  4b6d6ab87
+update  fuyuguang  2022-10-08 17:34:20  78634ffac
+update  fuyuguang  2022-09-30 11:05:40  20e982f8d
+Merge branch 'feature/feature_preRelease_9.0.28' of ssh://gitlab.9ijx.com:9830/android/jiuxian_studio into feature/feature_preRelease_9.0.28  fuyuguang  2022-09-29 19:18:17  b1f29dd3f
+update  fuyuguang  2022-09-29 19:18:13  67af0ee3c
+Merge branch 'feature/feature_fyg_9.0.26_mvvm' of ssh://gitlab.9ijx.com:9830/android/jiuxian_studio into feature/feature_preRelease_9.0.28  fuyuguang  2022-09-29 16:00:28  e6481f6c8
+update  fuyuguang  2022-09-26 19:01:04  abc3239e7
+Merge branch 'develop' of ssh://gitlab.9ijx.com:9830/android/jiuxian_studio into feature/feature_fyg_9.0.26_mvvm  fuyuguang  2022-09-26 16:14:07  94e4a61d0
+Merge tag 'release_9.0.26' into develop  fuyuguang  2022-09-26 16:09:59  61ccfad97
+update  fuyuguang  2022-09-26 15:27:48  e51507f0d
+update  fuyuguang  2022-09-22 11:22:06  03ec4208d
+update  fuyuguang  2022-09-21 17:25:52  26028cf03
+update  fuyuguang  2022-09-21 10:07:11  6cceec60c
+update  fuyuguang  2022-09-21 09:26:08  ea3f22ea7
+update  fuyuguang  2022-09-20 09:19:24  e123a5a0d
+Merge branch 'feature/feature_fyg_9.0.24' of ssh://gitlab.9ijx.com:9830/android/jiuxian_studio into feature/feature_fyg_9.0.26_net  fuyuguang  2022-09-13 10:01:25  bd940ffe3
+update  fuyuguang  2022-09-08 17:53:05  ad0e2ccb5
+update  fuyuguang  2022-09-07 16:43:39  4bd58dbb9
+update  fuyuguang  2022-09-06 11:00:32  80682d052
+Merge branch 'develop' of ssh://gitlab.9ijx.com:9830/android/jiuxian_studio into feature/feature_fyg_9.0.24  fuyuguang  2022-07-27 17:16:05  2da09034d
+update  fuyuguang  2022-07-27 09:39:31  a4393cad2
+update  fuyuguang  2022-07-22 10:07:55  7e856caed
+update  fuyuguang  2022-07-21 17:44:51  94634b5c2
+update  fuyuguang  2022-07-21 15:25:46  d6b892f9b

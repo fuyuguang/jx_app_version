@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources xmlns:tools="http://schemas.android.com/tools"
+    tools:keep="@layout/getui_notification,
+    @drawable/push,
+    @drawable/push_small,
+    @drawable/yw_1222_*,
+@layout/rp_*,
+ @drawable/rp_*" /><!-- 若您需要使⽤用其他⾃自定义推送图标，也需要在此处添加 -->

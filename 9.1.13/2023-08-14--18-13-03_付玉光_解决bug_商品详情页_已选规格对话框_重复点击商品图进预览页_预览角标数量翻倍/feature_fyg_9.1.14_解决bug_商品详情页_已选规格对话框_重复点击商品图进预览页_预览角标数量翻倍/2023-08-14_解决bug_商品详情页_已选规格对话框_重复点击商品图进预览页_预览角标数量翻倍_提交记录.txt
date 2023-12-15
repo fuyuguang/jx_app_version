@@ -1,0 +1,17 @@
+a1:
+commitTime: 2023/08/14-17:32:07    branchName: feature/feature_fyg_9.1.14_解决bug_商品详情页_已选规格对话框_重复点击商品图进预览页_预览角标数量翻倍    Commit: 222b926c8
+Message: a,1:dialog支持cancleable, a,2:只有设置了dialog的取消事件&成功消费掉了，即可关闭dialog
+Changed files:
+jiuxian/src/main/java/com/jiuxian/client/ui/BaseActivity.java
+jiuxian/src/main/java/com/jiuxian/client/ui/OrderCommit2Activity.java
+jiuxian/src/main/java/com/jiuxian/client/ui/OrderCommitActivity.java
+jiuxian/src/main/java/com/jiuxian/client/widget/DialogLoading.java
+
+
+a2:
+commitTime: 2023/08/14-18:50:00    branchName: feature/feature_fyg_9.1.14_解决bug_商品详情页_已选规格对话框_重复点击商品图进预览页_预览角标数量翻倍    Commit: ef5d33fa5
+Message: 解决bug_商品详情页_已选规格对话框_重复点击商品图进预览页_预览角标数量翻倍
+Changed files:
+jiuxian/src/main/java/com/jiuxian/client/widget/dialog/SwitchProductDialog.java
+
+
