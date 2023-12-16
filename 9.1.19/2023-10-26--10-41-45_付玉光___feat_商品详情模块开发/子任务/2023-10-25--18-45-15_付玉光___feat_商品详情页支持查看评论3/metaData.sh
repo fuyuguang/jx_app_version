@@ -1,18 +1,20 @@
+#!/bin/bash
+source ${shell_script_loc}/workFlowUtil.sh
 projectName=酒仙官网app
 productManager=周立新
+workDir=/酒仙官网app/9.1.19/2023-10-26--10-41-45_付玉光___feat_商品详情模块开发/子任务/2023-10-25--18-45-15_付玉光___feat_商品详情页支持查看评论3
 developer=付玉光
-taskName=有子任务的父任务也支持重命名
+taskName=商品详情页支持查看评论3
 branchVersion=9.1.19
 developerGroup=/Users/fuyuguang/Documents/付玉光Notes/1createTask/data/projectItem/酒仙官网app/DeveloperGroup.txt
 productManagerGroup=/Users/fuyuguang/Documents/付玉光Notes/1createTask/data/projectItem/酒仙官网app/ProductManagerGroup.txt
 workDirParent=/Users/fuyuguang/jiuxian_studio/doc/1版本
 mateDataCreateDate=2023-10-25
-mateDataCreateTaskHourMinuteSecond=18-35-36
-workDir=/Users/fuyuguang/jiuxian_studio/doc/1版本/酒仙官网app/9.1.19/2023-10-25--18-35-36_付玉光_Y_feat_有子任务的父任务也支持重命名
-branchName=feature/feature_fyg_9.1.19_有子任务的父任务也支持重命名
+mateDataCreateTaskHourMinuteSecond=18-45-15
+branchName=feature/feature_fyg_9.1.19_商品详情页支持查看评论3
 preReleaseBranchName=feature/feature_preRelease_9.1.19
 renamedFeatureBranchName=
-createTaskTime=2023-10-25/18-35-36
+createTaskTime=2023-10-25/18-45-15
 emailFileName=test_email.md
 createTestEmailScriptName=appendTestEmail.sh
 branchMapTable=/Users/fuyuguang/Documents/付玉光Notes/1createTask/data/projectItem/酒仙官网app/branchCreateTimeMapTable.txt
@@ -20,8 +22,8 @@ changedFileList=changedFileList.txt
 main=develop
 gitProjectRootPath=/Users/fuyuguang/jiuxian_studio
 showPatchDetails=false
-isCreateBranch=true
-createBranchFlag=Y
+isCreateBranch=false
+createBranchFlag=_
 taskTypeNameAbbreviation=feat
 generateFileChangedListScriptFile=listChangedFile.sh
 generateRenameBranchScriptFile=renamedBranchScriptFile.sh
@@ -29,12 +31,21 @@ generateDeleteFeatureBranchScriptFile=deleteFeatureBranch.sh
 #项目元数据列出版本目录文件存放路径
 projectMetaDataVersionList=/Users/fuyuguang/Documents/付玉光Notes/1createTask/data/projectItem/酒仙官网app/version_list.txt
 #markdown文件名
-taskDescriptionFile=有子任务的父任务也支持重命名.md
+taskDescriptionFile=商品详情页支持查看评论3.md
 #任务层级文件
 taskHierarchyGroup=/Users/fuyuguang/Documents/付玉光Notes/1createTask/data/projectItem/酒仙官网app/TaskHierarchyGroup.txt
 #任务层级，标识是子任务还是父任务
-taskHierarchyNameAbbreviation=level_1
+taskHierarchyNameAbbreviation=level_2
 #临时的父级任务列表文件
 temTaskListFilePath=/Users/fuyuguang/Documents/付玉光Notes/1createTask/data/projectItem/酒仙官网app/tem/taskList/taskList.txt
 metaDataPath=metaData.txt
-finishTaskTime=2023-10-26/10-47-26
+finishTaskTimeStamp=1698291488
+
+
+
+
+
+metaDataPath=$(getFullDirectoryPath ${workDir} ${taskWorkDirParentLoc})/${metaDataFileName}
+metaDataActionConsole ${metaDataPath}
+
+

@@ -1,5 +1,8 @@
+#!/bin/bash
+source ${shell_script_loc}/workFlowUtil.sh
 projectName=酒仙官网app
 productManager=周立新
+workDir=/酒仙官网app/9.1.19/2023-10-26--10-41-45_付玉光___feat_商品详情模块开发/子任务/2023-10-25--18-40-00_付玉光___feat_商品详情页单击头图进入浏览页2
 developer=付玉光
 taskName=商品详情页单击头图进入浏览页2
 branchVersion=9.1.19
@@ -8,7 +11,6 @@ productManagerGroup=/Users/fuyuguang/Documents/付玉光Notes/1createTask/data/p
 workDirParent=/Users/fuyuguang/jiuxian_studio/doc/1版本
 mateDataCreateDate=2023-10-25
 mateDataCreateTaskHourMinuteSecond=18-40-00
-workDir=/Users/fuyuguang/jiuxian_studio/doc/1版本/酒仙官网app/9.1.19/2023-10-26--10-41-45_付玉光___feat_商品详情模块开发/子任务/2023-10-25--18-40-00_付玉光___feat_商品详情页单击头图进入浏览页2
 branchName=feature/feature_fyg_9.1.19_商品详情页单击头图进入浏览页2
 preReleaseBranchName=feature/feature_preRelease_9.1.19
 renamedFeatureBranchName=
@@ -37,3 +39,10 @@ taskHierarchyNameAbbreviation=level_2
 #临时的父级任务列表文件
 temTaskListFilePath=/Users/fuyuguang/Documents/付玉光Notes/1createTask/data/projectItem/酒仙官网app/tem/taskList/taskList.txt
 metaDataPath=metaData.txt
+
+
+
+
+metaDataPath=$(getFullDirectoryPath ${workDir} ${taskWorkDirParentLoc})/${metaDataFileName}
+metaDataActionConsole ${metaDataPath}
+
