@@ -16,7 +16,7 @@ productManagerGroup=/Users/fuyuguang/Documents/付玉光Notes/1createTask/data/p
 workDirParent=/Users/fuyuguang/jiuxian_studio/doc/1版本
 mateDataCreateDate=2023-11-29
 mateDataCreateTaskHourMinuteSecond=18-41-33
-workDir=/Users/fuyuguang/jiuxian_studio/doc/1版本/酒仙官网app/9.1.20/2023-11-29--14-46-26_付玉光___feat_越来越/子任务/2023-11-29--18-41-33_付玉光_Y_feat_测试2
+workDir=/酒仙官网app/9.1.20/2023-11-29--14-46-26_付玉光___feat_越来越/子任务/2023-11-29--18-41-33_付玉光_Y_feat_测试2
 branchName=feature/feature_fyg_9.1.20_测试2
 preReleaseBranchName=feature/feature_preRelease_9.1.20
 renamedFeatureBranchName=
@@ -48,6 +48,6 @@ changeScopeRelativePath=table/变更影响范围.md
 taskDescribeRelativePath=table/描述.md
 taskDesc=
 changeScope=
-metaDataPath=${workDir}/${metaDataFileName}
+metaDataPath=$(getFullDirectoryPath ${workDir} ${taskWorkDirParentLoc})/${metaDataFileName}
 metaDataActionConsole ${metaDataPath}
 

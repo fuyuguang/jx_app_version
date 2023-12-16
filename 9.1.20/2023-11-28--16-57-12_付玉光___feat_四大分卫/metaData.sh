@@ -1,9 +1,9 @@
 #!/bin/bash
 source ${shell_script_loc}/workFlowUtil.sh
+workDir=/酒仙官网app/9.1.20/2023-11-28--16-57-12_付玉光___feat_四大分卫
 finishTaskTimeStamp=1701502128
 preReleaseBranchName=feature/feature_preRelease_9.1.20
 branchName=feature/feature_fyg_9.1.20_四大分卫
-workDir=/Users/fuyuguang/jiuxian_studio/doc/1版本/酒仙官网app/9.1.20/2023-11-28--16-57-12_付玉光___feat_四大分卫
 taskDescriptionFile=四大分卫.md
 taskName=四大分卫
 developer=付玉光
@@ -48,7 +48,7 @@ changeScopeRelativePath=table/变更影响范围.md
 taskDescribeRelativePath=table/描述.md
 taskDesc=四大分卫taskDesc
 changeScope=四大分卫changeScope
-metaDataPath=${workDir}/${metaDataFileName}
+metaDataPath=$(getFullDirectoryPath ${workDir} ${taskWorkDirParentLoc})/${metaDataFileName}
 metaDataActionConsole ${metaDataPath}
 
 subTaskCount=1

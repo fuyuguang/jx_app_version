@@ -1,9 +1,9 @@
 #!/bin/bash
 source ${shell_script_loc}/workFlowUtil.sh
+workDir=/酒仙官网app/9.1.20/2023-11-28--17-18-09_付玉光___feat_sfwf/子任务/2023-11-28--17-33-14_付玉光___feat_我的/子任务/2023-11-28--17-40-54_付玉光___feat_无法卧榻
 finishTaskTimeStamp=1702347603
 preReleaseBranchName=feature/feature_preRelease_9.1.20
 branchName=feature/feature_fyg_9.1.20_无法卧榻
-workDir=/Users/fuyuguang/jiuxian_studio/doc/1版本/酒仙官网app/9.1.20/2023-11-28--17-18-09_付玉光___feat_sfwf/子任务/2023-11-28--17-33-14_付玉光___feat_我的/子任务/2023-11-28--17-40-54_付玉光___feat_无法卧榻
 taskDescriptionFile=无法卧榻.md
 taskName=无法卧榻
 developer=付玉光
@@ -48,6 +48,6 @@ changeScopeRelativePath=table/变更影响范围.md
 taskDescribeRelativePath=table/描述.md
 taskDesc=
 changeScope=
-metaDataPath=${workDir}/${metaDataFileName}
+metaDataPath=$(getFullDirectoryPath ${workDir} ${taskWorkDirParentLoc})/${metaDataFileName}
 metaDataActionConsole ${metaDataPath}
 

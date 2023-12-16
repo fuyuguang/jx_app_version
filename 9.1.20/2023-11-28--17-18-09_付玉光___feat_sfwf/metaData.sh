@@ -1,9 +1,9 @@
 #!/bin/bash
 source ${shell_script_loc}/workFlowUtil.sh
+workDir=/酒仙官网app/9.1.20/2023-11-28--17-18-09_付玉光___feat_sfwf
 finishTaskTimeStamp=1702347603
 preReleaseBranchName=feature/feature_preRelease_9.1.20
 branchName=feature/feature_fyg_9.1.20_sfwf
-workDir=/Users/fuyuguang/jiuxian_studio/doc/1版本/酒仙官网app/9.1.20/2023-11-28--17-18-09_付玉光___feat_sfwf
 taskDescriptionFile=sfwf.md
 taskName=sfwf
 developer=付玉光
@@ -48,7 +48,7 @@ changeScopeRelativePath=table/变更影响范围.md
 taskDescribeRelativePath=table/描述.md
 taskDesc=sfwf taskDesc
 changeScope=sfwf changeScope
-metaDataPath=${workDir}/${metaDataFileName}
+metaDataPath=$(getFullDirectoryPath ${workDir} ${taskWorkDirParentLoc})/${metaDataFileName}
 metaDataActionConsole ${metaDataPath}
 
 subTaskCount=1

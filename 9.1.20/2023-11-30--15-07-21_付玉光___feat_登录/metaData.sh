@@ -1,5 +1,6 @@
 #!/bin/bash
 source ${shell_script_loc}/workFlowUtil.sh
+workDir=/酒仙官网app/9.1.20/2023-11-30--15-07-21_付玉光___feat_登录
 finishTaskTimeStamp=1701502128
 projectName=酒仙官网app
 taskTypeNameAbbreviation=feat
@@ -16,7 +17,6 @@ productManagerGroup=/Users/fuyuguang/Documents/付玉光Notes/1createTask/data/p
 workDirParent=/Users/fuyuguang/jiuxian_studio/doc/1版本
 mateDataCreateDate=2023-11-30
 mateDataCreateTaskHourMinuteSecond=15-07-21
-workDir=/Users/fuyuguang/jiuxian_studio/doc/1版本/酒仙官网app/9.1.20/2023-11-30--15-07-21_付玉光___feat_登录
 branchName=feature/feature_fyg_9.1.20_登录
 preReleaseBranchName=feature/feature_preRelease_9.1.20
 renamedFeatureBranchName=
@@ -48,7 +48,7 @@ changeScopeRelativePath=table/变更影响范围.md
 taskDescribeRelativePath=table/描述.md
 taskDesc=
 changeScope=
-metaDataPath=${workDir}/${metaDataFileName}
+metaDataPath=$(getFullDirectoryPath ${workDir} ${taskWorkDirParentLoc})/${metaDataFileName}
 metaDataActionConsole ${metaDataPath}
 
 subTaskCount=0
