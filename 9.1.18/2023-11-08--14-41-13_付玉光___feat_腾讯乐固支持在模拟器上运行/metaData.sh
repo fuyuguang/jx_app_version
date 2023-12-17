@@ -1,25 +1,25 @@
 #!/bin/bash
 source ${shell_script_loc}/workFlowUtil.sh
-workDir=/酒仙官网app/9.1.18/2023-12-01--17-29-47_付玉光___feat_jiuxian_android_jiagu支持打其他渠道包
 projectName=酒仙官网app
 taskTypeNameAbbreviation=feat
+workDir=/酒仙官网app/9.1.18/2023-11-08--14-41-13_付玉光___feat_腾讯乐固支持在模拟器上运行
 taskTypeIndex=
 createBranchFlag=_
 productManager=周立新
 developer=付玉光
 tester=
-taskName=jiuxian_android_jiagu支持打其他渠道包
+taskName=腾讯乐固支持在模拟器上运行
 branchVersion=9.1.18
 developerGroup=/Users/fuyuguang/Documents/付玉光Notes/1createTask/data/projectItem/酒仙官网app/DeveloperGroup.txt
 testerGroup=/Users/fuyuguang/Documents/付玉光Notes/1createTask/data/projectItem/酒仙官网app/TesterGroup.txt
 productManagerGroup=/Users/fuyuguang/Documents/付玉光Notes/1createTask/data/projectItem/酒仙官网app/ProductManagerGroup.txt
 workDirParent=/Users/fuyuguang/jiuxian_studio/doc/1版本
-mateDataCreateDate=2023-12-01
-mateDataCreateTaskHourMinuteSecond=17-29-47
-branchName=feature/feature_fyg_9.1.18_jiuxian_android_jiagu支持打其他渠道包
+mateDataCreateDate=2023-11-08
+mateDataCreateTaskHourMinuteSecond=14-41-13
+branchName=feature/feature_fyg_9.1.18_腾讯乐固支持在模拟器上运行
 preReleaseBranchName=feature/feature_preRelease_9.1.18
 renamedFeatureBranchName=
-createTaskTime=2023-12-01/17-29-48
+createTaskTime=2023-11-08/14-41-15
 emailFileName=test_email.md
 createTestEmailScriptName=appendTestEmail.sh
 branchMapTable=/Users/fuyuguang/Documents/付玉光Notes/1createTask/data/projectItem/酒仙官网app/branchCreateTimeMapTable.txt
@@ -32,7 +32,7 @@ generateFileChangedListScriptFile=listChangedFile.sh
 generateRenameBranchScriptFile=renamedBranchScriptFile.sh
 generateDeleteFeatureBranchScriptFile=deleteFeatureBranch.sh
 projectMetaData=metaData.txt
-taskDescriptionFile=jiuxian_android_jiagu支持打其他渠道包.md
+taskDescriptionFile=腾讯乐固支持在模拟器上运行.md
 #项目元数据目录
 projectMetaDataVersionList=/Users/fuyuguang/Documents/付玉光Notes/1createTask/data/projectItem/酒仙官网app/version_list.txt
 #临时的父级任务列表文件
@@ -42,10 +42,11 @@ taskHierarchyGroup=/Users/fuyuguang/Documents/付玉光Notes/1createTask/data/pr
 taskHierarchyNameAbbreviation=level_1
 #项目临时数据存放目录
 projectTemDir=/Users/fuyuguang/Documents/付玉光Notes/1createTask/data/projectItem/酒仙官网app/tem
-metaDataFileName=metaData.sh
-changeScopeRelativePath=table/变更影响范围.md
-taskDescribeRelativePath=table/描述.md
-taskDesc=
+metaDataPath=metaData.txt
 changeScope=
+taskDesc=如果没有对应版本的测试机，开启模拟器进行测试
+finishTaskTimeStamp=1699693953
+subTaskCount=0
+taskRowspan=2
 metaDataPath=$(getFullDirectoryPath ${workDir} ${taskWorkDirParentLoc})/${metaDataFileName}
 metaDataActionConsole ${metaDataPath}
