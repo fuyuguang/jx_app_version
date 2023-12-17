@@ -20,7 +20,7 @@ function replaceAbs2RelativePath() {
 }
 
 
-projectVersionWorkDir="/Users/fuyuguang/jiuxian_studio/doc/1版本/酒仙官网app/9.1.12"
+projectVersionWorkDir="/Users/fuyuguang/jiuxian_studio/doc/1版本/酒仙官网app/9.1.17"
 metaDataFileName="metaData.sh"
 listOfMetadataFilesForTestingSubTasks=./"temp.txt"
 find "${projectVersionWorkDir}" -type f -name "${metaDataFileName}" > "${listOfMetadataFilesForTestingSubTasks}"
