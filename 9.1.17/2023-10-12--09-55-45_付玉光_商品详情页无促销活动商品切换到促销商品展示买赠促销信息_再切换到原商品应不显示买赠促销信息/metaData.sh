@@ -30,8 +30,8 @@ projectMetaData=/Users/fuyuguang/Documents/付玉光Notes/1createTask/data/proje
 taskDescriptionFile=fix_商品详情页无促销活动商品切换到促销商品展示买赠促销信息_再切换到原商品应不显示买赠促销信息.md
 metaDataPath=/Users/fuyuguang/jiuxian_studio/doc/1版本/酒仙官网app/9.1.17/2023-10-12--09-55-45_付玉光_商品详情页无促销活动商品切换到促销商品展示买赠促销信息_再切换到原商品应不显示买赠促销信息/metaData.txt
 finishTaskTimeStamp=1697105658
-subTaskCount=0
-taskRowspan=2
 
 metaDataPath=$(getFullDirectoryPath ${workDir} ${taskWorkDirParentLoc})/${metaDataFileName}
 metaDataActionConsole ${metaDataPath}
+subTaskCount=0
+taskRowspan=2

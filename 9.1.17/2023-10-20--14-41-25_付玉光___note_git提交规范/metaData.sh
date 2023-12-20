@@ -35,8 +35,8 @@ projectMetaData=/Users/fuyuguang/Documents/付玉光Notes/1createTask/data/proje
 taskDescriptionFile=git提交规范.md
 metaDataPath=/Users/fuyuguang/jiuxian_studio/doc/1版本/酒仙官网app/9.1.17/2023-10-20--14-41-25_付玉光___note_git提交规范/metaData.txt
 finishTaskTimeStamp=1697789201
-subTaskCount=0
-taskRowspan=2
 
 metaDataPath=$(getFullDirectoryPath ${workDir} ${taskWorkDirParentLoc})/${metaDataFileName}
 metaDataActionConsole ${metaDataPath}
+subTaskCount=0
+taskRowspan=2

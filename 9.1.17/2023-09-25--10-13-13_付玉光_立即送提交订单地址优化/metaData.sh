@@ -27,8 +27,8 @@ generateFileChangedListScriptFile=/Users/fuyuguang/jiuxian_studio/doc/1版本/�
 generateRenameBranchScriptFile=/Users/fuyuguang/jiuxian_studio/doc/1版本/酒仙官网app/9.1.17/2023-09-25--10-13-13_付玉光_立即送提交订单地址优化/renamedBranchScriptFile.sh
 generateDeleteFeatureBranchScriptFile=/Users/fuyuguang/jiuxian_studio/doc/1版本/酒仙官网app/9.1.17/2023-09-25--10-13-13_付玉光_立即送提交订单地址优化/deleteFeatureBranch.sh
 finishTaskTimeStamp=1696835470
-subTaskCount=0
-taskRowspan=2
 
 metaDataPath=$(getFullDirectoryPath ${workDir} ${taskWorkDirParentLoc})/${metaDataFileName}
 metaDataActionConsole ${metaDataPath}
+subTaskCount=0
+taskRowspan=2

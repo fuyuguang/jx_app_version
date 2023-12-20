@@ -30,8 +30,8 @@ projectMetaData=/Users/fuyuguang/Documents/付玉光Notes/1createTask/data/proje
 taskDescriptionFile=通过参数指定dialog是否允许用户按返回键关闭除提交订单页面默认都允许用户关闭.md
 metaDataPath=/Users/fuyuguang/jiuxian_studio/doc/1版本/酒仙官网app/9.1.17/2023-10-10--15-25-03_付玉光_通过参数指定dialog是否允许用户按返回键关闭除提交订单页面默认都允许用户关闭/metaData.txt
 finishTaskTimeStamp=1696922739
-subTaskCount=0
-taskRowspan=2
 
 metaDataPath=$(getFullDirectoryPath ${workDir} ${taskWorkDirParentLoc})/${metaDataFileName}
 metaDataActionConsole ${metaDataPath}
+subTaskCount=0
+taskRowspan=2

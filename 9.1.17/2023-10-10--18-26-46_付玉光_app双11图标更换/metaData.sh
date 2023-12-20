@@ -30,8 +30,8 @@ projectMetaData=/Users/fuyuguang/Documents/付玉光Notes/1createTask/data/proje
 taskDescriptionFile=app双11图标更换.md
 metaDataPath=/Users/fuyuguang/jiuxian_studio/doc/1版本/酒仙官网app/9.1.17/2023-10-10--18-26-46_付玉光_app双11图标更换/metaData.txt
 finishTaskTimeStamp=1696933652
-subTaskCount=0
-taskRowspan=2
 
 metaDataPath=$(getFullDirectoryPath ${workDir} ${taskWorkDirParentLoc})/${metaDataFileName}
 metaDataActionConsole ${metaDataPath}
+subTaskCount=0
+taskRowspan=2

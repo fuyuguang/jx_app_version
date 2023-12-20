@@ -30,8 +30,8 @@ projectMetaData=/Users/fuyuguang/Documents/付玉光Notes/1createTask/data/proje
 taskDescriptionFile=fix_9.1.14_没有安装支付宝禁止使用支付宝网页支付.md
 metaDataPath=/Users/fuyuguang/jiuxian_studio/doc/1版本/酒仙官网app/9.1.17/2023-10-12--11-16-48_付玉光_fix_9.1.14_没有安装支付宝禁止使用支付宝网页支付/metaData.txt
 finishTaskTimeStamp=1697597933
-subTaskCount=0
-taskRowspan=2
 
 metaDataPath=$(getFullDirectoryPath ${workDir} ${taskWorkDirParentLoc})/${metaDataFileName}
 metaDataActionConsole ${metaDataPath}
+subTaskCount=0
+taskRowspan=2

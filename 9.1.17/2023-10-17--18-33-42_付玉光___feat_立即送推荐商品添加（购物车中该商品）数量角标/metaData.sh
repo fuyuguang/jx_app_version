@@ -35,8 +35,8 @@ projectMetaData=/Users/fuyuguang/Documents/付玉光Notes/1createTask/data/proje
 taskDescriptionFile=立即送推荐商品添加（购物车中该商品）数量角标.md
 metaDataPath=/Users/fuyuguang/jiuxian_studio/doc/1版本/酒仙官网app/9.1.17/2023-10-17--18-33-42_付玉光___feat_立即送推荐商品添加（购物车中该商品）数量角标/metaData.txt
 finishTaskTimeStamp=1697538852
-subTaskCount=0
-taskRowspan=2
 metaDataPath=$(getFullDirectoryPath ${workDir} ${taskWorkDirParentLoc})/${metaDataFileName}
 metaDataActionConsole ${metaDataPath}
 
+subTaskCount=0
+taskRowspan=2
