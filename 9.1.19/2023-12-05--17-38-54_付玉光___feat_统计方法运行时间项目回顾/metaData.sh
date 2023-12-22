@@ -8,7 +8,6 @@ branchMapTable=/酒仙官网app/branchCreateTimeMapTable.txt
 productManagerGroup=/酒仙官网app/ProductManagerGroup.txt
 testerGroup=/酒仙官网app/TesterGroup.txt
 developerGroup=/酒仙官网app/DeveloperGroup.txt
-finishTaskTimeStamp=1702734119
 workDir=/酒仙官网app/9.1.19/2023-12-05--17-38-54_付玉光___feat_统计方法运行时间项目回顾
 projectName=酒仙官网app
 taskTypeNameAbbreviation=feat
