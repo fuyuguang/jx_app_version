@@ -1,6 +1,5 @@
 #!/bin/bash
 source ${shell_script_loc}/workFlowUtil.sh
-finishTaskTimeStamp=1702347776
 preReleaseBranchName=feature/feature_preRelease_9.1.20
 branchName=feature/feature_fyg_9.1.20_33333
 workDir=/酒仙官网app/9.1.20/2023-12-11--19-02-43_付玉光___feat_33333

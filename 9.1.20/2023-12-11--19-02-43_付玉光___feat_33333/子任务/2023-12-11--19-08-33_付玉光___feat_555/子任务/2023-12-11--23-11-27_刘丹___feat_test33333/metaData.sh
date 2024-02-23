@@ -8,7 +8,6 @@ taskName=test33333
 developer=刘丹
 taskHierarchyNameAbbreviation=level_2
 branchVersion=9.1.20
-finishTaskTimeStamp=1702307510
 projectName=酒仙官网app
 taskTypeNameAbbreviation=feat
 taskTypeIndex=

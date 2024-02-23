@@ -1,7 +1,6 @@
 #!/bin/bash
 source ${shell_script_loc}/workFlowUtil.sh
 workDir=/酒仙官网app/9.1.20/2023-11-28--17-18-09_付玉光___feat_sfwf/子任务/2023-11-28--17-33-14_付玉光___feat_我的/子任务/2023-11-28--22-55-23_付玉光___feat_电动车
-finishTaskTimeStamp=1702347603
 projectName=酒仙官网app
 taskTypeNameAbbreviation=feat
 taskTypeIndex=

@@ -1,7 +1,6 @@
 #!/bin/bash
 source ${shell_script_loc}/workFlowUtil.sh
 workDir=/酒仙官网app/9.1.20/2023-11-28--17-18-09_付玉光___feat_sfwf
-finishTaskTimeStamp=1702347603
 preReleaseBranchName=feature/feature_preRelease_9.1.20
 branchName=feature/feature_fyg_9.1.20_sfwf
 taskDescriptionFile=sfwf.md
