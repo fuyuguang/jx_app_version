@@ -1,6 +1,5 @@
 #!/bin/bash
 source ${shell_script_loc}/workFlowUtil.sh
-finishTaskTimeStamp=1702968465
 projectName=酒仙官网app
 taskTypeNameAbbreviation=feat
 taskTypeIndex=

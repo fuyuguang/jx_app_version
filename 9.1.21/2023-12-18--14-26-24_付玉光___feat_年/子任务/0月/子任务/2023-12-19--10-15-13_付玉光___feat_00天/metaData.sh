@@ -8,7 +8,6 @@ taskName=00天
 developer=付玉光
 taskHierarchyNameAbbreviation=level_2
 branchVersion=9.1.21
-finishTaskTimeStamp=1702952133
 projectName=酒仙官网app
 taskTypeNameAbbreviation=feat
 taskTypeIndex=
